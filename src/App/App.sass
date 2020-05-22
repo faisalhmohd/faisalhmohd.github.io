@@ -1,6 +1,12 @@
 @mixin font-global
   font-family: 'Inter', sans-serif;
 
+@mixin smooth
+  transition: transform 50ms linear;
+
+body
+  cursor: none; 
+
 h1
   @include font-global
   font-size: 40px;
@@ -23,20 +29,44 @@ body
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
 
+.cursor
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 10;
+  mix-blend-mode: difference;
+
 .window
   height: 100%;
   margin: 0;
   padding: 50px;
+  background: white;
 
 
 .window-inner
   height: calc(100vh - 100px);
   border: 2px solid;
+  overflow: auto;
 
   .section-one
     padding: 100px;
     h1
       max-width: 900px;
+
+  .section-two
+    padding: 100px;
+    h1
+      max-width: 900px;
+
+    .portfolio
+      padding: 30px 0;
+
+      &-item
+        padding: 20px 0;
+        img
+          width: 100%;
 
 .window-components
   .logo
