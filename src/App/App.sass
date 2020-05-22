@@ -1,6 +1,22 @@
 @mixin font-global
   font-family: 'Inter', sans-serif;
-  
+
+h1
+  @include font-global
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+  margin-top: 5px;
+
+h2
+  @include font-global
+  font-size: 35px;
+  font-weight: 800;
+  color: #a2a2a2;
+  margin: 0;
+  margin-top: 5px;
+
+
 body
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -16,6 +32,11 @@ body
 .window-inner
   height: calc(100vh - 100px);
   border: 2px solid;
+
+  .section-one
+    padding: 100px;
+    h1
+      max-width: 900px;
 
 .window-components
   .logo
