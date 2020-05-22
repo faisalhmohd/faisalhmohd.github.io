@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+.window {
+  height: 100%;
+  margin: 0;
+  padding: 50px;
+}
+
+.window-inner {
+  height: calc(100vh - 100px);
+  border: 2px solid;
+}
