@@ -3,8 +3,6 @@ import React, { useRef, useEffect } from 'react';
 function Cursor() {
   const cursorRef = useRef(null);
 
-  
-
   useEffect(() => {
     const handleCursorPosition = e => {
       const xPos = e.clientX;
