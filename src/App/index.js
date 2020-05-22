@@ -9,7 +9,16 @@ function App() {
         <div className="window-inner">
           <div className="window-components">
             <div className="logo">
-              <img src={Logo} />
+              <img src={Logo} alt="logo" />
+            </div>
+            <div className="navbar">
+              {
+                ['about', 'work', 'contact'].map(item => (
+                  <div className="navbar-item" key={item}>
+                    {item}
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>

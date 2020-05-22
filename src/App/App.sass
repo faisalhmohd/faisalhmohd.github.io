@@ -1,9 +1,11 @@
+@mixin font-global
+  font-family: 'Inter', sans-serif;
+  
 body
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-
 
 .window
   height: 100%;
@@ -18,8 +20,29 @@ body
 .window-components
   .logo
     position: absolute;
-    top: 15px;
+    top: 0px;
     left: 10px;
 
     img
       width: 80px;
+      padding: 20px 25px;
+      background: white;
+  
+  .navbar
+    background: white;
+    position: absolute;
+    display: block;
+    top: 27px;
+    right: 80px;
+
+    &-item
+      display: inline-block;
+      padding: 10px;
+      @include font-global;
+      font-size: 20px;
+    
+    &-item:first-child
+      padding-left: 30px;
+    
+    &-item:last-child
+      padding-right: 30px;
