@@ -3,7 +3,7 @@ import Mercedes from '../mercedes.jpg';
 
 function Portfolio() {
   return (
-    <div className="section-two">
+    <div className="portfolio-section">
       <h2>Portfolio</h2>
       <h1>Some work I have contributed to.</h1>
 
