@@ -3,11 +3,11 @@ import React from 'react';
 import WindowComponents from './WindowComponents';
 import Cursor from './Cursor';
 import About from './About';
+import Portfolio from './Portfolio';
 
 import { MouseAreaProvider } from './Contexts/MouseAreaProvider';
 
 import './App.sass';
-import Mercedes from './mercedes.jpg';
 
 function App() {
   return (
@@ -18,19 +18,7 @@ function App() {
           <div className="window-inner">
             <WindowComponents />
             <About />
-            <div className="section-two">
-              <h2>Portfolio</h2>
-              <h1>Some work I have contributed to.</h1>
-
-              <div className="portfolio">
-                <div className="portfolio-item">
-                  <img src={Mercedes} alt="Mercedes Work" />
-                </div>
-                <div className="portfolio-item">
-                  <img src={Mercedes} alt="Mercedes Work" />
-                </div>
-              </div>
-            </div>
+            <Portfolio />
           </div>
         </div>
       </div>
