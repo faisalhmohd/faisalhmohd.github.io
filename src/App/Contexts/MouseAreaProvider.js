@@ -5,8 +5,13 @@ const MouseAreaContext = React.createContext();
 const MouseAreaProvider = ({ children }) => {
   const [ currentSection, setSection ] = useState('');
 
+  const getMouseAreaProps = (sectionName) => ({
+    onMouseOver: () => setSection(sectionName),
+    onMouseOut: () => setSection('')
+  });
+
   return (
-    <MouseAreaContext.Provider value={{ currentSection, setSection }}>
+    <MouseAreaContext.Provider value={{ currentSection, setSection, getMouseAreaProps }}>
       { children }
     </MouseAreaContext.Provider>
   );
@@ -14,5 +19,5 @@ const MouseAreaProvider = ({ children }) => {
 
 export {
   MouseAreaContext,
-  MouseAreaProvider
-}
+  MouseAreaProvider,
+};
