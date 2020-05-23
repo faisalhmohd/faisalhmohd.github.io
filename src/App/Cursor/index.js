@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useContext } from 'react';
-import { MouseAreaContext } from '../Contexts/MouseAreaProvider';
+import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 
 const CURSOR_WIDTH = 20;
 const CURSOR_HEIGHT = 20;
 
 function Cursor() {
   const cursorRef = useRef(null);
-  const { currentSection } = useContext(MouseAreaContext);
+  const { currentSection } = useContext(CursorAnimationContext);
 
   useEffect(() => {
     const handleCursorPosition = e => {

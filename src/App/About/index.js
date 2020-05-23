@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { MouseAreaContext } from '../Contexts/MouseAreaProvider';
+import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 
 function About() {
-  const { getMouseAreaProps} = useContext(MouseAreaContext);
+  const CursorAnimation = useContext(CursorAnimationContext);
 
   return (
-    <div className="about-section" {...getMouseAreaProps('about-section')}>
+    <div className="about-section" {...CursorAnimation.getProps('about-section')}>
       <h2>Mohammad Faisal</h2>
       <h1>Software and Media Engineer, Race Driver based from Dhaka, Bangladesh.</h1>
     </div>

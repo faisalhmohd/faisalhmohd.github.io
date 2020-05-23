@@ -5,13 +5,13 @@ import Cursor from './Cursor';
 import About from './About';
 import Portfolio from './Portfolio';
 
-import { MouseAreaProvider } from './Contexts/MouseAreaProvider';
+import { CursorAnimationProvider } from './Contexts/CursorAnimationProvider';
 
 import './App.sass';
 
 function App() {
   return (
-    <MouseAreaProvider>
+    <CursorAnimationProvider>
       <div className="App">
         <Cursor/>
         <div className="window">
@@ -22,7 +22,7 @@ function App() {
           </div>
         </div>
       </div>
-    </MouseAreaProvider>
+    </CursorAnimationProvider>
   );
 }
 
