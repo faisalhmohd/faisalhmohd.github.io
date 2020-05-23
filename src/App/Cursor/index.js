@@ -1,10 +1,12 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
+import { MouseAreaContext } from '../Contexts/MouseAreaProvider';
 
 const CURSOR_WIDTH = 100;
 const CURSOR_HEIGHT = 100;
 
 function Cursor() {
   const cursorRef = useRef(null);
+  const { currentSection } = useContext(MouseAreaContext);
 
   useEffect(() => {
     const handleCursorPosition = e => {
@@ -33,7 +35,7 @@ function Cursor() {
   }, []);
 
   return (
-    <div className="cursor" ref={cursorRef} />
+    <div className={`cursor ${currentSection}`} ref={cursorRef} />
   )
 }
 
