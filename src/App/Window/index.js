@@ -4,6 +4,7 @@ import WindowComponents from '../WindowComponents';
 import About from '../About';
 import Portfolio from '../Portfolio';
 import Work from '../Work';
+import Online from '../Online';
 
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 
@@ -17,6 +18,7 @@ function Window() {
         <About />
         <Portfolio />
         <Work />
+        <Online />
       </div>
     </div>
   );

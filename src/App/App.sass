@@ -49,16 +49,8 @@ body
   img
     display: inline-block;
     width: 32px;
-    
-  &.about-section
-    width: 100px;
-    height: 100px;
 
   &.portfolio-section
-    &-heading
-      width: 100px;
-      height: 100px;
-
     &-mercedes
       width: auto;
       height: auto;
@@ -78,6 +70,11 @@ body
 
       h1
         color: white;
+
+  &.online-section, &.work-section, &.portfolio-section, &.about-section
+    &-heading
+      width: 100px;
+      height: 100px;
 
 .window
   height: 100%;
@@ -173,6 +170,12 @@ body
       
       h2
         font-size: 18px;
+
+  .online-section
+    padding: 75px;
+
+    &-heading
+      padding: 25px;
 
 .window-components
   .logo
