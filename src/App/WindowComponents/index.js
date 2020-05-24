@@ -3,7 +3,14 @@ import Logo from '../Logo.png';
 import LogoWhite from '../Logo-White.png';
 
 function WindowComponents({ currentSection }) {
-  const isLogoWhite = ['portfolio-section-mercedes', 'portfolio-section-emirates'].includes(currentSection);
+  const isLogoWhite = [
+    'portfolio-section-mercedes', 
+    'portfolio-section-emirates',
+    'online-section-steam',
+    'online-section-linkedin',
+    'online-section-keybase',
+    'online-section-twitter',
+  ].includes(currentSection);
 
   return (
     <div className="window-components">

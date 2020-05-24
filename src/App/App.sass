@@ -86,7 +86,7 @@ body
   &.portfolio-section-mercedes
     background: black;
 
-    h1
+    h1, h2
       color: white;
 
     .window-inner
@@ -101,10 +101,14 @@ body
           background: black;
           color: white;
 
+      .online-section-item
+        img
+          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+
   &.portfolio-section-emirates
     background: #d71921;
 
-    h1
+    h1, h2
       color: white;
 
     .window-inner
@@ -118,6 +122,98 @@ body
         .navbar
           background: #d71921;
           color: white;
+
+      .online-section-item
+        img
+          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+
+  &.online-section-steam
+    background: #1b2838;
+
+    h1, h2
+      color: white;
+
+    .window-inner
+      border-color: white;
+
+      .window-components
+        .logo
+          img
+            background: #1b2838;
+        
+        .navbar
+          background: #1b2838;
+          color: white;
+
+      .online-section-item
+        img
+          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+
+  &.online-section-keybase
+    background: #3663ea;
+
+    h1, h2
+      color: white;
+
+    .window-inner
+      border-color: white;
+
+      .window-components
+        .logo
+          img
+            background: #3663ea;
+        
+        .navbar
+          background: #3663ea;
+          color: white;
+
+      .online-section-item
+        img
+          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+
+  &.online-section-linkedin
+    background: #0077B5;
+
+    h1, h2
+      color: white;
+
+    .window-inner
+      border-color: white;
+
+      .window-components
+        .logo
+          img
+            background: #0077B5;
+        
+        .navbar
+          background: #0077B5;
+          color: white;
+
+      .online-section-item
+        img
+          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+
+  &.online-section-twitter
+    background: #1DA1F2;
+
+    h1, h2
+      color: white;
+
+    .window-inner
+      border-color: white;
+
+      .window-components
+        .logo
+          img
+            background: #1DA1F2;
+        
+        .navbar
+          background: #1DA1F2;
+          color: white;
+
+      .online-section-item
+        img
+          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
 
 .window-inner
   height: calc(100vh - 100px);
@@ -176,6 +272,14 @@ body
 
     &-heading
       padding: 25px;
+
+    &-items
+      display: flex;
+      flex-wrap: wrap;
+
+    img
+      width: 40px;
+      padding: 30px;
 
 .window-components
   .logo
