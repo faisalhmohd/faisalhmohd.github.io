@@ -50,7 +50,13 @@ function Cursor() {
         </div>
       }
       {
-        currentSection === 'work-section-item' && 
+        [
+          'work-section-item', 
+          'online-section-twitter', 
+          'online-section-linkedin', 
+          'online-section-keybase', 
+          'online-section-steam'
+        ].includes(currentSection) && 
         <div className="text-wrapper">
           <img src={ExternalLinkIcon} className="external-link-icon" />
         </div>

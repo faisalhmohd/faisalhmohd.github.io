@@ -35,6 +35,24 @@
         img
           filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
 
+@mixin cursor-only-white
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  mix-blend-mode: normal;
+  background: transparent;
+
+  img
+    filter: invert(0%) sepia(3%) saturate(8%) hue-rotate(333deg) brightness(99%) contrast(101%);
+
+@mixin cursor-only-black
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+
+  img
+    filter: invert(0%) sepia(3%) saturate(8%) hue-rotate(333deg) brightness(99%) contrast(101%);
 
 body, a
   cursor: none; 
@@ -106,14 +124,12 @@ body
 
   &.work-section
     &-item
-      width: auto;
-      height: auto;
-      border-radius: 0;
-      background: transparent;
-
-      img
-        filter: invert(0%) sepia(3%) saturate(8%) hue-rotate(333deg) brightness(99%) contrast(101%);
-
+      @include cursor-only-black
+  
+  &.online-section
+    &-steam, &-keybase, &-linkedin, &-twitter
+      @include cursor-only-white
+      
   &.online-section, &.work-section, &.portfolio-section, &.about-section
     &-heading
       width: 100px;
