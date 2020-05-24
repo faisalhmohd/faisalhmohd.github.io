@@ -215,10 +215,14 @@ body
         img
           filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
 
+.window-inner::-webkit-scrollbar
+  display: none;
+
 .window-inner
   height: calc(100vh - 100px);
   border: 2px solid;
   overflow: auto;
+  -ms-overflow-style: none;
 
   .about-section
     padding: 75px;
@@ -313,3 +317,21 @@ body
     
     &-item:last-child
       padding-right: 30px;
+
+  .scrollbar
+    position: absolute;
+    @include font-global;
+    bottom: 300px;
+    right: 25px;
+
+    &-text
+      background: white;
+      padding: 10px;
+
+    &-bar
+      background: black;
+      width: 20px;
+      height: 5px;
+      border-radius: 5px;
+      margin: 0 auto 0px 24px;
+      transform: translate(0, 0px);

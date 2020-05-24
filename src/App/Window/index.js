@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 
 import WindowComponents from '../WindowComponents';
 import About from '../About';
@@ -9,12 +9,13 @@ import Online from '../Online';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 
 function Window() {
+  const windowRef = useRef(null);
   const { currentSection } = useContext(CursorAnimationContext);
 
   return (
     <div className={`window ${currentSection}`}>
-      <div className="window-inner">
-        <WindowComponents currentSection={currentSection} />
+      <div className="window-inner" ref={windowRef}>
+        <WindowComponents currentSection={currentSection} windowRef={windowRef} />
         <About />
         <Portfolio />
         <Work />
