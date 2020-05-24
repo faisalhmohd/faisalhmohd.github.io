@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useContext } from 'react';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
+import ExternalLinkIcon from './external-link.svg';
 
 const CURSOR_WIDTH = 20;
 const CURSOR_HEIGHT = 20;
@@ -33,7 +34,15 @@ function Cursor() {
   }, []);
 
   return (
-    <div className={`cursor ${currentSection}`} ref={cursorRef} />
+    <div className={`cursor ${currentSection}`} ref={cursorRef}>
+      {
+        currentSection === 'portfolio-section-mercedes' && 
+        <div className="text-wrapper">
+          <h1>Mercedes-AMG</h1>
+          <img src={ExternalLinkIcon} className="external-link-icon" />
+        </div>
+      }
+    </div>
   )
 }
 
