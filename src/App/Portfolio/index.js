@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 import Mercedes from '../portfolio-mercedes.jpg';
+import Emirates from '../portfolio-emirates.png';
 
 function Portfolio() {
   const CursorAnimation = useContext(CursorAnimationContext);
@@ -15,11 +16,13 @@ function Portfolio() {
       <div className="portfolio">
         <div className="portfolio-item" {...CursorAnimation.getProps('portfolio-section-mercedes')}>
           <a href="https://www.mercedes-amg.com/en.html" target="_blank">
-            <img src={Mercedes} alt="Mercedes Work" />
+            <img src={Mercedes} alt="Mercedes-AMG Work" />
           </a>
         </div>
-        <div className="portfolio-item">
-          <img src={Mercedes} alt="Mercedes Work" />
+        <div className="portfolio-item" {...CursorAnimation.getProps('portfolio-section-emirates')}>
+          <a href="https://www.skycargo.com" target="_blank">
+            <img src={Emirates} alt="Emirates SkyCargo Work" />
+          </a>
         </div>
       </div>
     </div>

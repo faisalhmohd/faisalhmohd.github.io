@@ -42,6 +42,13 @@ function Cursor() {
           <img src={ExternalLinkIcon} className="external-link-icon" />
         </div>
       }
+      {
+        currentSection === 'portfolio-section-emirates' && 
+        <div className="text-wrapper">
+          <h1>Emirates SkyCargo</h1>
+          <img src={ExternalLinkIcon} className="external-link-icon" />
+        </div>
+      }
     </div>
   )
 }
