@@ -4,7 +4,7 @@
 @mixin smooth
   transition: transform 50ms linear;
 
-body
+body, a
   cursor: none; 
 
 h1
@@ -39,20 +39,60 @@ body
   pointer-events: none;
   transition: width 0.2s linear, height 0.2s linear;
 
+  .text-wrapper
+    white-space: nowrap;
+
+  h1
+    display: inline-block;
+    margin-right: 20px;
+  
+  img
+    display: inline-block;
+    width: 32px;
+    
   &.about-section
     width: 100px;
     height: 100px;
 
-  &.portfolio-section-heading
-    width: 100px;
-    height: 100px;
+  &.portfolio-section
+    &-heading
+      width: 100px;
+      height: 100px;
+
+    &-mercedes
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      mix-blend-mode: normal;
+      background: transparent;
+
+      h1
+        color: white;
 
 .window
   height: 100%;
   margin: 0;
   padding: 50px;
   background: white;
+  transition: all 0.3s linear;
 
+  &.portfolio-section-mercedes
+    background: black;
+
+    h1
+      color: white;
+
+    .window-inner
+      border-color: white;
+
+      .window-components
+        .logo
+          img
+            background: black;
+        
+        .navbar
+          background: black;
+          color: white;
 
 .window-inner
   height: calc(100vh - 100px);
@@ -83,7 +123,8 @@ body
       &-item
         padding: 20px 0;
         img
-          width: 100%;
+          width: calc(100% - 25px);
+          padding: 25px;
 
 .window-components
   .logo
@@ -95,6 +136,7 @@ body
       width: 80px;
       padding: 20px 25px;
       background: white;
+      transition: all 0.3s linear;
   
   .navbar
     background: white;
@@ -102,6 +144,8 @@ body
     display: block;
     top: 27px;
     right: 80px;
+    transition: all 0.3s linear;
+    border: 2px solid;
 
     &-item
       display: inline-block;
