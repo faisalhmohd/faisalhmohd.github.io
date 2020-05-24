@@ -2,7 +2,39 @@
   font-family: 'Inter', sans-serif;
 
 @mixin smooth
-  transition: transform 50ms linear;
+  transition: all 0.3s linear;
+
+@mixin window-white-version($section, $color)
+  &.#{$section}
+    background: $color;
+
+    h1, h2
+      color: white;
+
+    .window-inner
+      border-color: white;
+
+      .window-components
+        .logo
+          img
+            background: $color;
+        
+        .navbar
+          background: $color;
+          color: white;
+        
+        .scrollbar
+          &-text
+            background: $color
+            color: white;
+
+          &-bar
+            background: white;
+
+      .online-section-item
+        img
+          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+
 
 body, a
   cursor: none; 
@@ -81,139 +113,14 @@ body
   margin: 0;
   padding: 50px;
   background: white;
-  transition: all 0.3s linear;
+  @include smooth
 
-  &.portfolio-section-mercedes
-    background: black;
-
-    h1, h2
-      color: white;
-
-    .window-inner
-      border-color: white;
-
-      .window-components
-        .logo
-          img
-            background: black;
-        
-        .navbar
-          background: black;
-          color: white;
-
-      .online-section-item
-        img
-          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
-
-  &.portfolio-section-emirates
-    background: #d71921;
-
-    h1, h2
-      color: white;
-
-    .window-inner
-      border-color: white;
-
-      .window-components
-        .logo
-          img
-            background: #d71921;
-        
-        .navbar
-          background: #d71921;
-          color: white;
-
-      .online-section-item
-        img
-          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
-
-  &.online-section-steam
-    background: #1b2838;
-
-    h1, h2
-      color: white;
-
-    .window-inner
-      border-color: white;
-
-      .window-components
-        .logo
-          img
-            background: #1b2838;
-        
-        .navbar
-          background: #1b2838;
-          color: white;
-
-      .online-section-item
-        img
-          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
-
-  &.online-section-keybase
-    background: #3663ea;
-
-    h1, h2
-      color: white;
-
-    .window-inner
-      border-color: white;
-
-      .window-components
-        .logo
-          img
-            background: #3663ea;
-        
-        .navbar
-          background: #3663ea;
-          color: white;
-
-      .online-section-item
-        img
-          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
-
-  &.online-section-linkedin
-    background: #0077B5;
-
-    h1, h2
-      color: white;
-
-    .window-inner
-      border-color: white;
-
-      .window-components
-        .logo
-          img
-            background: #0077B5;
-        
-        .navbar
-          background: #0077B5;
-          color: white;
-
-      .online-section-item
-        img
-          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
-
-  &.online-section-twitter
-    background: #1DA1F2;
-
-    h1, h2
-      color: white;
-
-    .window-inner
-      border-color: white;
-
-      .window-components
-        .logo
-          img
-            background: #1DA1F2;
-        
-        .navbar
-          background: #1DA1F2;
-          color: white;
-
-      .online-section-item
-        img
-          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+  @include window-white-version("portfolio-section-mercedes", black)
+  @include window-white-version("portfolio-section-emirates", #d71921)
+  @include window-white-version("online-section-steam", #1b2838)
+  @include window-white-version("online-section-keybase", #3663ea)
+  @include window-white-version("online-section-linkedin", #0077B5)
+  @include window-white-version("online-section-twitter", #1DA1F2)
 
 .window-inner::-webkit-scrollbar
   display: none;
@@ -295,7 +202,7 @@ body
       width: 80px;
       padding: 20px 25px;
       background: white;
-      transition: all 0.3s linear;
+      @include smooth
   
   .navbar
     background: white;
@@ -303,7 +210,7 @@ body
     display: block;
     top: 27px;
     right: 80px;
-    transition: all 0.3s linear;
+    @include smooth
     border: 2px solid;
 
     &-item
@@ -327,6 +234,7 @@ body
     &-text
       background: white;
       padding: 10px;
+      @include smooth
 
     &-bar
       background: black;
@@ -335,3 +243,4 @@ body
       border-radius: 5px;
       margin: 0 auto 0px 24px;
       transform: translate(0, 0px);
+      @include smooth
