@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 
-import NewsCred from './newscred-logo.png';
-import Mercedes from './mercedes-amg-logo.png';
-
 function Work() {
   const CursorAnimation = useContext(CursorAnimationContext);
 
@@ -15,17 +12,17 @@ function Work() {
       </div>
 
       <div className="work-section-items">
-        <div className="work-section-item">
+        <div className="work-section-item" {...CursorAnimation.getProps('work-section-item')}>
           <a>
-            <img src={NewsCred} width="350" />
+            <h1 className="company-name">NewsCred</h1>
             <h1>Software Engineer</h1>
             <h2>2019 - Present</h2>
           </a>
         </div>
 
-        <div className="work-section-item">
+        <div className="work-section-item"  {...CursorAnimation.getProps('work-section-item')}>
           <a>
-            <img src={Mercedes} width="250" />
+            <h1  className="company-name">Mercedes-AMG Petronas F1 Team</h1>
             <h1>Media Engineer</h1>
             <h2>2019 - Present</h2>
           </a>

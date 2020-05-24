@@ -81,6 +81,7 @@ body
   img
     display: inline-block;
     width: 32px;
+    @include smooth;
 
   &.portfolio-section
     &-mercedes
@@ -102,6 +103,16 @@ body
 
       h1
         color: white;
+
+  &.work-section
+    &-item
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background: transparent;
+
+      img
+        filter: invert(0%) sepia(3%) saturate(8%) hue-rotate(333deg) brightness(99%) contrast(101%);
 
   &.online-section, &.work-section, &.portfolio-section, &.about-section
     &-heading
@@ -174,6 +185,9 @@ body
 
       h1
         font-size: 22px;
+
+        &.company-name
+          font-size: 30px;
       
       h2
         font-size: 18px;

@@ -49,6 +49,12 @@ function Cursor() {
           <img src={ExternalLinkIcon} className="external-link-icon" />
         </div>
       }
+      {
+        currentSection === 'work-section-item' && 
+        <div className="text-wrapper">
+          <img src={ExternalLinkIcon} className="external-link-icon" />
+        </div>
+      }
     </div>
   )
 }
