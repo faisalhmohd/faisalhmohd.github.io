@@ -13,7 +13,7 @@ function Work() {
 
       <div className="work-section-items">
         <div className="work-section-item" {...CursorAnimation.getProps('work-section-item')}>
-          <a>
+          <a href="https://www.newscred.com/" target="_blank">
             <h1 className="company-name">NewsCred</h1>
             <h1>Software Engineer</h1>
             <h2>2019 - Present</h2>
@@ -21,7 +21,7 @@ function Work() {
         </div>
 
         <div className="work-section-item"  {...CursorAnimation.getProps('work-section-item')}>
-          <a>
+          <a href="https://www.mercedesamgf1.com/en/" target="_blank">
             <h1  className="company-name">Mercedes-AMG Petronas F1 Team</h1>
             <h1>Media Engineer</h1>
             <h2>2019 - Present</h2>
