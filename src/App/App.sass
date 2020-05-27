@@ -1,3 +1,13 @@
+@keyframes slide
+  20%
+    margin-left: 0px;
+  30%
+    margin-left: -100%;
+  65%
+    margin-left: -200%;
+  90%
+    margin-left: -300%;
+  
 @mixin font-global
   font-family: 'Inter', sans-serif;
 
@@ -183,9 +193,44 @@ body
 
       &-item
         padding: 20px 0;
-        img
-          width: calc(100% - 25px);
-          padding: 25px;
+        position: relative;
+
+        a
+          overflow: hidden;
+          height: 500px;
+          width: 100%;
+          margin: 0 auto;
+          display: block;
+          margin: 25px;
+
+        .slideshow-wrapper
+          width: calc(100% * 4);
+
+        .slide
+          float: left;
+          height: 510px;
+          width: 25%;
+
+        img.background-image
+          width: 100%;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          object-fit: cover;
+
+        img.logo
+          width: 180px;
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+      
+        &:hover 
+          .slideshow-wrapper
+            animation: slide 10s ease infinite;
+          
+          img.background-image
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
 
   .work-section
     padding: 75px;
@@ -244,6 +289,7 @@ body
     right: 80px;
     @include smooth
     border: 2px solid;
+    z-index: 1;
 
     &-item
       display: inline-block;
