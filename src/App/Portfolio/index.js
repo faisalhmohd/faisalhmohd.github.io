@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
+import Slider from '../Slider';
+
 import MercedesAMGOne from './mercedes-amg-photo-1.png';
 import MercedesAMGTwo from './mercedes-amg-photo-2.png';
 import MercedesAMGThree from './mercedes-amg-photo-3.png';
@@ -11,10 +13,22 @@ function Portfolio() {
   const CursorAnimation = useContext(CursorAnimationContext);
 
   const mercedesAmgImages = [
-    'https://www.mercedes-benz.com/en/mbsocialcar/mbsocialcar-mercedes-amg-gt-r/_jcr_content/root/slider_6/sliderchilditems/slideritem_3/image/MQ7-0-image-20190114132747/4-mercedes-benz-vehicles-mercedes-amg-gt-r-c-190-3400x1440.jpeg',
-    MercedesAMGOne,
-    MercedesAMGTwo,
-    MercedesAMGThree
+    {
+      src: 'https://www.mercedes-benz.com/en/mbsocialcar/mbsocialcar-mercedes-amg-gt-r/_jcr_content/root/slider_6/sliderchilditems/slideritem_3/image/MQ7-0-image-20190114132747/4-mercedes-benz-vehicles-mercedes-amg-gt-r-c-190-3400x1440.jpeg',
+      alt: 'Mercedes Portfolio One'
+    },
+    {
+      src: MercedesAMGOne,
+      alt: 'Mercedes Portfolio One'
+    },
+    {
+      src: MercedesAMGTwo,
+      alt: 'Mercedes Portfolio One'
+    },
+    {
+      src: MercedesAMGThree,
+      alt: 'Mercedes Portfolio One'
+    }
   ];
  
   return (
@@ -26,16 +40,11 @@ function Portfolio() {
 
       <div className="portfolio">
         <div className="portfolio-item" {...CursorAnimation.getProps('portfolio-section-mercedes')}>
-          <a href="https://www.mercedes-amg.com/en.html" target="_blank">
-            <div className="slideshow-wrapper">
-              {mercedesAmgImages.map(image => (
-                <div className="slide">
-                  <img src={image} className="background-image" alt="Mercedes-AMG Work" />
-                </div>
-              ))}
-            </div>
-            <img className="logo" src={MercedesAMGLogo} />
-          </a>
+          <Slider 
+            images={mercedesAmgImages}
+            link="https://www.mercedes-amg.com/en.html"
+          />
+          <img className="logo" src={MercedesAMGLogo} />
         </div>
         <div className="portfolio-item" {...CursorAnimation.getProps('portfolio-section-emirates')}>
           <a href="https://www.skycargo.com" target="_blank">
