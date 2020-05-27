@@ -1,11 +1,11 @@
 @keyframes slide
-  20%
+  10%
     margin-left: 0px;
-  30%
+  35%
     margin-left: -100%;
-  65%
+  60%
     margin-left: -200%;
-  90%
+  85%
     margin-left: -300%;
   
 @mixin font-global
@@ -197,18 +197,29 @@ body
 
         a
           overflow: hidden;
-          height: 520px;
+          height: 700px;
           width: 100%;
           margin: 0 auto;
+          margin-left: 25px;
           display: block;
-          margin: 25px;
+
+          &:hover
+            .slideshow-wrapper
+              animation: slide 10s ease infinite;
+          
+            img.background-image
+              -webkit-filter: grayscale(0%);
+              filter: grayscale(0%);
+
+            img.logo
+              opacity: 0%
 
         .slideshow-wrapper
           width: calc(100% * 4);
 
         .slide
           float: left;
-          height: 520px;
+          height: 700px;
           width: 25%;
 
         img.background-image
@@ -216,6 +227,7 @@ body
           -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
           object-fit: cover;
+          height: 100%;
 
         img.logo
           width: 180px;
@@ -223,14 +235,7 @@ body
           position: absolute;
           top: 50%;
           left: 50%;
-      
-        &:hover 
-          .slideshow-wrapper
-            animation: slide 10s ease infinite;
-          
-          img.background-image
-            -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
+          transition: opacity 0.3s linear;
 
   .work-section
     padding: 75px;
