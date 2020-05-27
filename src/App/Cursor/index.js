@@ -36,29 +36,19 @@ function Cursor() {
   return (
     <div className={`cursor ${currentSection}`} ref={cursorRef}>
       {
-        currentSection === 'portfolio-section-mercedes' && 
-        <div className="text-wrapper">
-          <h1>Mercedes-AMG</h1>
-          <img src={ExternalLinkIcon} className="external-link-icon" />
-        </div>
-      }
-      {
-        currentSection === 'portfolio-section-emirates' && 
-        <div className="text-wrapper">
-          <h1>Emirates SkyCargo</h1>
-          <img src={ExternalLinkIcon} className="external-link-icon" />
-        </div>
-      }
-      {
         [
-          'work-section-item', 
-          'online-section-twitter', 
-          'online-section-linkedin', 
-          'online-section-keybase', 
+          'work-section-item',
+
+          'portfolio-section-mercedes',
+          'portfolio-section-emirates',
+
+          'online-section-twitter',
+          'online-section-linkedin',
+          'online-section-keybase',
           'online-section-steam'
         ].includes(currentSection) && 
         <div className="text-wrapper">
-          <img src={ExternalLinkIcon} className="external-link-icon" />
+          <img src={ExternalLinkIcon} className="external-link-icon" alt="external-link-cursor" />
         </div>
       }
     </div>
