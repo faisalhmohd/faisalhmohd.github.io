@@ -46,7 +46,8 @@ function Cursor() {
           'online-section-twitter',
           'online-section-linkedin',
           'online-section-keybase',
-          'online-section-steam'
+          'online-section-steam',
+          'online-section-youtube'
         ].includes(currentSection) && 
         <div className="text-wrapper">
           <img src={ExternalLinkIcon} className="external-link-icon" alt="external-link-cursor" />

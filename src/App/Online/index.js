@@ -6,6 +6,7 @@ import Keybase from './keybase.svg';
 import Steam from './steam.svg';
 import Twitter from './twitter.svg';
 import Link from '../Link';
+import Youtube from './youtube.svg';
 
 function Online() {
   const CursorAnimation = useContext(CursorAnimationContext);
@@ -39,6 +40,12 @@ function Online() {
         <div className="online-section-item" {...CursorAnimation.getProps('online-section-twitter')}>
           <Link href="https://twitter.com/faisalhmohd">
             <img src={Twitter} alt="twitter" />
+          </Link>
+        </div>
+
+        <div className="online-section-item" {...CursorAnimation.getProps('online-section-youtube')}>
+          <Link href="https://youtube.com/mohammadfaisalhere">
+            <img src={Youtube} alt="youtube" />
           </Link>
         </div>
       </div>

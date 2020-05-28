@@ -8,10 +8,12 @@ function WindowComponents({ currentSection, windowRef }) {
     'portfolio-section-mercedes', 
     'portfolio-section-emirates',
     'portfolio-section-medium',
+
     'online-section-steam',
     'online-section-linkedin',
     'online-section-keybase',
     'online-section-twitter',
+    'online-section-youtube',
   ].includes(currentSection);
 
   useEffect(() => {
