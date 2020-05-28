@@ -14,15 +14,15 @@
 @mixin smooth
   transition: all 0.3s linear;
 
-@mixin window-white-version($section, $color)
+@mixin window-theme($section, $color, $theme-color: white)
   &.#{$section}
     background: $color;
 
     h1, h2
-      color: white;
+      color: $theme-color;
 
     .window-inner
-      border-color: white;
+      border-color: $theme-color;
 
       .window-components
         .logo
@@ -31,19 +31,20 @@
         
         .navbar
           background: $color;
-          color: white;
+          color: $theme-color;
         
         .scrollbar
           &-text
             background: $color
-            color: white;
+            color: $theme-color;
 
           &-bar
-            background: white;
+            background: $theme-color;
 
       .online-section-item
         img
-          filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+          @if $theme-color == white
+            filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
 
 @mixin cursor-only-white
   width: auto;
@@ -59,10 +60,11 @@
   width: auto;
   height: auto;
   border-radius: 0;
+  mix-blend-mode: normal;
   background: transparent;
 
   img
-    filter: invert(0%) sepia(3%) saturate(8%) hue-rotate(333deg) brightness(99%) contrast(101%);
+    filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
 
 body, a
   cursor: none;
@@ -151,7 +153,9 @@ body
   &.online-section
     &-steam, &-keybase, &-linkedin, &-twitter, &-youtube
       @include cursor-only-white
-      
+    &-spotify
+      @include cursor-only-black
+  
   &.online-section, &.work-section, &.portfolio-section, &.about-section
     &-heading
       width: 100px;
@@ -164,15 +168,17 @@ body
   background: white;
   @include smooth
 
-  @include window-white-version("portfolio-section-mercedes", black)
-  @include window-white-version("portfolio-section-emirates", #d71921)
-  @include window-white-version("portfolio-section-medium", black)
+  @include window-theme("portfolio-section-mercedes", black)
+  @include window-theme("portfolio-section-emirates", #d71921)
+  @include window-theme("portfolio-section-medium", black)
 
-  @include window-white-version("online-section-steam", #1b2838)
-  @include window-white-version("online-section-keybase", #3663ea)
-  @include window-white-version("online-section-linkedin", #0077B5)
-  @include window-white-version("online-section-twitter", #1DA1F2)
-  @include window-white-version("online-section-youtube", #FF0000)
+  @include window-theme("online-section-steam", #1b2838)
+  @include window-theme("online-section-keybase", #3663ea)
+  @include window-theme("online-section-linkedin", #0077B5)
+  @include window-theme("online-section-twitter", #1DA1F2)
+  @include window-theme("online-section-youtube", #FF0000)
+
+  @include window-theme("online-section-spotify", #1DB954, black)
 
 .window-inner::-webkit-scrollbar
   display: none;
