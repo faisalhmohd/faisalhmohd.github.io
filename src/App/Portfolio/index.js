@@ -6,7 +6,11 @@ import MercedesAMGOne from './mercedes-amg-photo-1.png';
 import MercedesAMGTwo from './mercedes-amg-photo-2.png';
 import MercedesAMGThree from './mercedes-amg-photo-3.png';
 import MercedesAMGLogo from './mercedes-amg.png';
+
 import EmiratesSkyCargoLogo from './emirates-sky-cargo.png';
+import EmiratesSkyCargoOne from './emirates-skycargo-photo-1.png';
+import EmiratesSkyCargoTwo from './emirates-skycargo-photo-2.png';
+import EmiratesSkyCargoThree from './emirates-skycargo-photo-3.png';
 
 
 function Portfolio() {
@@ -30,6 +34,25 @@ function Portfolio() {
       alt: 'Mercedes Portfolio One'
     }
   ];
+
+  const emiratesSkyCargoImages = [
+    {
+      src: "https://www.arabianbusiness.com/public/images/2020/03/25/Emirates-SkyCargo.jpg",
+      alt: "Emirates Portfolio One",
+    },
+    {
+      src: EmiratesSkyCargoOne,
+      alt: "Emirates Portfolio One",
+    },
+    {
+      src: EmiratesSkyCargoTwo,
+      alt: "Emirates Portfolio One",
+    },
+    {
+      src: EmiratesSkyCargoThree,
+      alt: "Emirates Portfolio One",
+    },
+  ];
  
   return (
     <div className="portfolio-section">
@@ -48,11 +71,14 @@ function Portfolio() {
             caption="Website Development | Private Lounge"
           />
         </div>
-        <div className="portfolio-item" {...CursorAnimation.getProps('portfolio-section-emirates')}>
-          <a href="https://www.skycargo.com" target="_blank">
-            <img src="https://www.arabianbusiness.com/public/images/2020/03/25/Emirates-SkyCargo.jpg" className="background-image" alt="Emirates SkyCargo Work" />
-            <img className="logo" src={EmiratesSkyCargoLogo} />
-          </a>
+        <div className="portfolio-item">
+          <Slider 
+            images={emiratesSkyCargoImages}
+            animationTag='portfolio-section-emirates'
+            logo={EmiratesSkyCargoLogo}
+            caption="Website Development | Blog"
+            link="https://www.skycargo.com"
+          />
         </div>
       </div>
     </div>
