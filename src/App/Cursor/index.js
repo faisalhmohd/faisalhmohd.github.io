@@ -48,7 +48,8 @@ function Cursor() {
           'online-section-keybase',
           'online-section-steam',
           'online-section-youtube',
-          'online-section-spotify'
+          'online-section-spotify',
+          'online-section-github',
         ].includes(currentSection) && 
         <div className="text-wrapper">
           <img src={ExternalLinkIcon} className="external-link-icon" alt="external-link-cursor" />

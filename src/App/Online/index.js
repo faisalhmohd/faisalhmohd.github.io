@@ -8,6 +8,7 @@ import Twitter from './twitter.svg';
 import Link from '../Link';
 import Youtube from './youtube.svg';
 import Spotify from './spotify.svg';
+import Github from './github.svg';
 
 function Online() {
   const CursorAnimation = useContext(CursorAnimationContext);
@@ -53,6 +54,12 @@ function Online() {
         <div className="online-section-item" {...CursorAnimation.getProps('online-section-spotify')}>
           <Link href="http://open.spotify.com/user/faisalhmohd">
             <img src={Spotify} alt="spotify" />
+          </Link>
+        </div>
+
+        <div className="online-section-item" {...CursorAnimation.getProps('online-section-github')}>
+          <Link href="https://github.com/faisalhmohd">
+            <img src={Github} alt="github" />
           </Link>
         </div>
       </div>
