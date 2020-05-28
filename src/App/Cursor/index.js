@@ -41,6 +41,7 @@ function Cursor() {
 
           'portfolio-section-mercedes',
           'portfolio-section-emirates',
+          'portfolio-section-medium',
 
           'online-section-twitter',
           'online-section-linkedin',

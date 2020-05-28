@@ -134,6 +134,16 @@ body
       h1
         color: white;
 
+    &-medium
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      mix-blend-mode: normal;
+      background: transparent;
+
+      h1
+        color: white;
+
   &.work-section
     &-item
       @include cursor-only-black
@@ -156,6 +166,8 @@ body
 
   @include window-white-version("portfolio-section-mercedes", black)
   @include window-white-version("portfolio-section-emirates", #d71921)
+  @include window-white-version("portfolio-section-medium", black)
+
   @include window-white-version("online-section-steam", #1b2838)
   @include window-white-version("online-section-keybase", #3663ea)
   @include window-white-version("online-section-linkedin", #0077B5)
