@@ -5,6 +5,7 @@ import Linkedin from './linkedin.svg';
 import Keybase from './keybase.svg';
 import Steam from './steam.svg';
 import Twitter from './twitter.svg';
+import Link from '../Link';
 
 function Online() {
   const CursorAnimation = useContext(CursorAnimationContext);
@@ -18,27 +19,27 @@ function Online() {
 
       <div className="online-section-items">
         <div className="online-section-item" {...CursorAnimation.getProps('online-section-linkedin')}>
-          <a href="https://www.linkedin.com/in/faisalhmohd/" target="_blank">
-            <img src={Linkedin} />
-          </a>
+          <Link href="https://www.linkedin.com/in/faisalhmohd/">
+            <img src={Linkedin} alt="linkedin" />
+          </Link>
         </div>
 
         <div className="online-section-item" {...CursorAnimation.getProps('online-section-keybase')}>
-          <a href="https://keybase.io/mohdfaisal" target="_blank">
-            <img src={Keybase} />
-          </a>
+          <Link href="https://keybase.io/mohdfaisal">
+            <img src={Keybase} alt="keybase" />
+          </Link>
         </div>
         
         <div className="online-section-item" {...CursorAnimation.getProps('online-section-steam')}>
-          <a href="http://steamcommunity.com/id/potetoed/" target="_blank">
-            <img src={Steam} />
-          </a>
+          <Link href="http://steamcommunity.com/id/potetoed/">
+            <img src={Steam} alt="steam" />
+          </Link>
         </div>
 
         <div className="online-section-item" {...CursorAnimation.getProps('online-section-twitter')}>
-          <a href="https://twitter.com/faisalhmohd" target="_blank">
-            <img src={Twitter} />
-          </a>
+          <Link href="https://twitter.com/faisalhmohd">
+            <img src={Twitter} alt="twitter" />
+          </Link>
         </div>
       </div>
     </div>

@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Link from '../Link';
+import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 
-function Slider({ images, link }) {
+function Slider({ images, link, animationTag, logo, caption }) {
+  const CursorAnimation = useContext(CursorAnimationContext);
+
   return (
-    <a href={link} target="_blank">
+    <Link href={link} {...CursorAnimation.getProps(animationTag)}>
       <div className="slideshow-wrapper">
         {images.map(image => (
-          <div className="slide">
+          <div className="slide" key={image.src}>
             <img src={image.src} className="background-image" alt={image.alt} />
           </div>
         ))}
       </div>
-      
-    </a>
+      <div className="overlay-content">
+        <img className="logo" src={logo} alt="slider-logo" />
+        <h1>{caption}</h1>
+      </div>
+    </Link>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
+import Link from '../Link';
 
 function Work() {
   const CursorAnimation = useContext(CursorAnimationContext);
@@ -13,19 +14,19 @@ function Work() {
 
       <div className="work-section-items">
         <div className="work-section-item" {...CursorAnimation.getProps('work-section-item')}>
-          <a href="https://www.newscred.com/" target="_blank">
+          <Link href="https://www.newscred.com/">
             <h1 className="company-name">NewsCred</h1>
             <h1>Software Engineer</h1>
             <h2>2019 - Present</h2>
-          </a>
+          </Link>
         </div>
 
         <div className="work-section-item"  {...CursorAnimation.getProps('work-section-item')}>
-          <a href="https://www.mercedesamgf1.com/en/" target="_blank">
+          <Link href="https://www.mercedesamgf1.com/en/">
             <h1  className="company-name">Mercedes-AMG Petronas F1 Team</h1>
             <h1>Media Engineer</h1>
             <h2>2019 - Present</h2>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

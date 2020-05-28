@@ -211,7 +211,7 @@ body
               -webkit-filter: grayscale(0%);
               filter: grayscale(0%);
 
-            img.logo
+            .overlay-content
               opacity: 0%
 
         .slideshow-wrapper
@@ -229,13 +229,22 @@ body
           object-fit: cover;
           height: 100%;
 
-        img.logo
-          width: 180px;
+        .overlay-content
           transform: translate(-50%, -50%);
           position: absolute;
           top: 50%;
           left: 50%;
           transition: opacity 0.3s linear;
+          color: white;
+          text-align: center;
+
+          h1
+            font-size: 25px;
+            font-weight: 100;
+
+          img.logo
+            width: 180px;
+          
 
   .work-section
     padding: 75px;

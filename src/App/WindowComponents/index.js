@@ -14,18 +14,19 @@ function WindowComponents({ currentSection, windowRef }) {
   ].includes(currentSection);
 
   useEffect(() => {
+    const currentWindow = windowRef.current;
     const handleScrollPosition = e => {
       const yPos = e.target.scrollTop / e.target.scrollHeight * 340;
       
       scrollRef.current.style.transform = `translate(0, ${yPos}px)`;
     };
 
-    windowRef.current.addEventListener('scroll', handleScrollPosition);
+    currentWindow.addEventListener('scroll', handleScrollPosition);
 
     return () => {
-      windowRef.current.removeEventListener('scroll', handleScrollPosition);
+      currentWindow.removeEventListener('scroll', handleScrollPosition);
     }
-  }, []);
+  });
 
 
   return (

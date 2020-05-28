@@ -39,12 +39,14 @@ function Portfolio() {
       </div>
 
       <div className="portfolio">
-        <div className="portfolio-item" {...CursorAnimation.getProps('portfolio-section-mercedes')}>
+        <div className="portfolio-item" >
           <Slider 
             images={mercedesAmgImages}
             link="https://www.mercedes-amg.com/en.html"
+            animationTag="portfolio-section-mercedes"
+            logo={MercedesAMGLogo}
+            caption="Website Development | Private Lounge"
           />
-          <img className="logo" src={MercedesAMGLogo} />
         </div>
         <div className="portfolio-item" {...CursorAnimation.getProps('portfolio-section-emirates')}>
           <a href="https://www.skycargo.com" target="_blank">
