@@ -45,7 +45,7 @@ function WindowComponents({ currentSection, windowRef }) {
         <img src={isLogoWhite ? LogoWhite : Logo} alt="logo" />
       </div>
       <div className="navbar">
-        {["about", "work", "contact"].map((item) => (
+        {["about", "portfolio", "work", "online"].map((item) => (
           <div className="navbar-item" key={item}>
             {item}
           </div>
