@@ -35,6 +35,10 @@ function WindowComponents({ currentSection, windowRef }) {
     }
   });
 
+  const handleNavItemClick = (e, item) => {
+    document.getElementsByClassName(`${item}-section`)[0].scrollIntoView({ behavior: 'smooth' });
+  };
+
 
   return (
     <div className="window-components">
@@ -46,7 +50,7 @@ function WindowComponents({ currentSection, windowRef }) {
       </div>
       <div className="navbar">
         {["about", "portfolio", "work", "online"].map((item) => (
-          <div className="navbar-item" key={item}>
+          <div className="navbar-item" key={item} onClick={e => handleNavItemClick(e, item)}>
             {item}
           </div>
         ))}
