@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 import Slider from '../Slider';
 
-import MercedesAMGOne from './mercedes-amg-photo-1.png';
-import MercedesAMGTwo from './mercedes-amg-photo-2.png';
-import MercedesAMGThree from './mercedes-amg-photo-3.png';
+import MercedesAMGOne from './mercedesamg-photo-1.png';
+import MercedesAMGTwo from './mercedesamg-photo-2.png';
+import MercedesAMGThree from './mercedesamg-photo-3.png';
 import MercedesAMGLogo from './mercedes-amg.png';
 
 import EmiratesSkyCargoLogo from './emirates-sky-cargo.png';
