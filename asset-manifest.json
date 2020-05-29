@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b515a590.chunk.css",
+    "main.js": "/static/js/main.a70d64bb.chunk.js",
+    "main.js.map": "/static/js/main.a70d64bb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ceaf4b5f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ceaf4b5f.js.map",
+    "static/js/2.5e266f8c.chunk.js": "/static/js/2.5e266f8c.chunk.js",
+    "static/js/2.5e266f8c.chunk.js.map": "/static/js/2.5e266f8c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3babf0422a8bc156dfc3fa2b82c20a15.js": "/precache-manifest.3babf0422a8bc156dfc3fa2b82c20a15.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b515a590.chunk.css.map": "/static/css/main.b515a590.chunk.css.map",
+    "static/js/2.5e266f8c.chunk.js.LICENSE.txt": "/static/js/2.5e266f8c.chunk.js.LICENSE.txt",
+    "static/media/external-link.svg": "/static/media/external-link.1594834f.svg",
+    "static/media/formula-drift-logo.png": "/static/media/formula-drift-logo.2282477a.png",
+    "static/media/formula-drift-photo-0.jpg": "/static/media/formula-drift-photo-0.84dbfa0c.jpg",
+    "static/media/formuladrift-photo-1.png": "/static/media/formuladrift-photo-1.49535745.png",
+    "static/media/formuladrift-photo-2.png": "/static/media/formuladrift-photo-2.a37baaf9.png",
+    "static/media/formuladrift-photo-3.png": "/static/media/formuladrift-photo-3.ee8dc83d.png",
+    "static/media/github.svg": "/static/media/github.ddc25012.svg",
+    "static/media/keybase.svg": "/static/media/keybase.530637b9.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.619231ff.svg",
+    "static/media/medium-logo.png": "/static/media/medium-logo.a5a486cd.png",
+    "static/media/medium-photo-0.png": "/static/media/medium-photo-0.dc1c37f3.png",
+    "static/media/medium-photo-1.png": "/static/media/medium-photo-1.121b6030.png",
+    "static/media/medium-photo-2.png": "/static/media/medium-photo-2.062670c5.png",
+    "static/media/medium-photo-3.png": "/static/media/medium-photo-3.a91fa484.png",
+    "static/media/mercedesamg-photo-1.png": "/static/media/mercedesamg-photo-1.feb68c5e.png",
+    "static/media/mercedesamg-photo-2.png": "/static/media/mercedesamg-photo-2.7668e5ac.png",
+    "static/media/mercedesamg-photo-3.png": "/static/media/mercedesamg-photo-3.a596620d.png",
+    "static/media/spotify.svg": "/static/media/spotify.719ac2b3.svg",
+    "static/media/steam.svg": "/static/media/steam.3f6ff5c3.svg",
+    "static/media/twitter.svg": "/static/media/twitter.be066898.svg",
+    "static/media/youtube.svg": "/static/media/youtube.0f519090.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ceaf4b5f.js",
+    "static/js/2.5e266f8c.chunk.js",
+    "static/css/main.b515a590.chunk.css",
+    "static/js/main.a70d64bb.chunk.js"
+  ]
+}
