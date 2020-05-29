@@ -13,6 +13,7 @@ import EmiratesSkyCargoTwo from './emirates-skycargo-photo-2.png';
 import EmiratesSkyCargoThree from './emirates-skycargo-photo-3.png';
 
 import MediumLogo from './medium-logo.png';
+import MediumZero from './medium-photo-0.png';
 import MediumOne from './medium-photo-1.png';
 import MediumTwo from './medium-photo-2.png';
 import MediumThree from './medium-photo-3.png';
@@ -63,7 +64,7 @@ const emiratesSkyCargoImages = [
 
 const mediumImages = [
   {
-    src: 'https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+    src: MediumZero,
     alt: 'Medium Portfolio One'
   },
   {
@@ -134,6 +135,7 @@ function Portfolio() {
             animationTag='portfolio-section-medium'
             logo={MediumLogo}
             caption="Mobile Development | iOS | Android"
+            captionColor="black"
             link="https://play.google.com/store/apps/details?id=com.medium.reader&hl=en"
           />
         </div>
@@ -144,6 +146,7 @@ function Portfolio() {
             animationTag='portfolio-section-formuladrift'
             logo={FormulaDriftLogo}
             caption="Website Development | News | Live Score"
+            captionColor="black"
             link="https://www.formulad.com/"
           />
         </div>

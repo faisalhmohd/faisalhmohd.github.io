@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Link from '../Link';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 
-function Slider({ images, link, animationTag, logo, caption }) {
+function Slider({ images, link, animationTag, logo, caption, captionColor = 'white' }) {
   const CursorAnimation = useContext(CursorAnimationContext);
 
   return (
@@ -16,7 +16,7 @@ function Slider({ images, link, animationTag, logo, caption }) {
       </div>
       <div className="overlay-content">
         <img className="logo" src={logo} alt="slider-logo" />
-        <h1>{caption}</h1>
+        <h1 style={{ color: captionColor }}>{caption}</h1>
       </div>
     </Link>
   );
