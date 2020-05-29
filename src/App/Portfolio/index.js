@@ -20,9 +20,9 @@ import MediumThree from './medium-photo-3.png';
 
 import FormulaDriftLogo from './formula-drift-logo.png';
 import FormulaDriftZero from './formula-drift-photo-0.jpg';
-import FormulaDriftOne from './formula-drift-photo-1.png';
-import FormulaDriftTwo from './formula-drift-photo-2.png';
-import FormulaDriftThree from './formula-drift-photo-3.png';
+import FormulaDriftOne from './formuladrift-photo-1.png';
+import FormulaDriftTwo from './formuladrift-photo-2.png';
+import FormulaDriftThree from './formuladrift-photo-3.png';
 
 const mercedesAmgImages = [
   {
