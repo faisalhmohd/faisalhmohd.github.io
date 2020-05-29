@@ -116,15 +116,10 @@ body
     @include smooth;
 
   &.portfolio-section
-    &-mercedes, &-emirates, &-medium, &-formuladrift
-      width: auto;
-      height: auto;
-      border-radius: 0;
-      mix-blend-mode: normal;
-      background: transparent;
-
-      h1
-        color: white;
+    &-mercedes, &-emirates, &-formuladrift
+      @include cursor-only-white
+    &-medium
+      @include cursor-only-black
 
   &.work-section
     &-item
@@ -150,7 +145,7 @@ body
 
   @include window-theme("portfolio-section-mercedes", black)
   @include window-theme("portfolio-section-emirates", #d71921)
-  @include window-theme("portfolio-section-medium", black)
+  @include window-theme("portfolio-section-medium", white, black)
   @include window-theme("portfolio-section-formuladrift", #D31E21)
 
   @include window-theme("online-section-steam", #1b2838)
