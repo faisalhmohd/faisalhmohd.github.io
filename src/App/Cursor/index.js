@@ -32,7 +32,6 @@ function Cursor() {
           'work-section-item',
 
           'portfolio-section-mercedes',
-          'portfolio-section-emirates',
           'portfolio-section-medium',
           'portfolio-section-formuladrift',
 

@@ -7,11 +7,6 @@ import MercedesAMGTwo from './mercedesamg-photo-2.png';
 import MercedesAMGThree from './mercedesamg-photo-3.png';
 import MercedesAMGLogo from './mercedes-amg.png';
 
-import EmiratesSkyCargoLogo from './emirates-sky-cargo.png';
-import EmiratesSkyCargoOne from './emirates-skycargo-photo-1.png';
-import EmiratesSkyCargoTwo from './emirates-skycargo-photo-2.png';
-import EmiratesSkyCargoThree from './emirates-skycargo-photo-3.png';
-
 import MediumLogo from './medium-logo.png';
 import MediumZero from './medium-photo-0.png';
 import MediumOne from './medium-photo-1.png';
@@ -41,25 +36,6 @@ const mercedesAmgImages = [
     src: MercedesAMGThree,
     alt: 'Mercedes Portfolio One'
   }
-];
-
-const emiratesSkyCargoImages = [
-  {
-    src: "https://www.arabianbusiness.com/public/images/2020/03/25/Emirates-SkyCargo.jpg",
-    alt: "Emirates Portfolio One",
-  },
-  {
-    src: EmiratesSkyCargoOne,
-    alt: "Emirates Portfolio One",
-  },
-  {
-    src: EmiratesSkyCargoTwo,
-    alt: "Emirates Portfolio One",
-  },
-  {
-    src: EmiratesSkyCargoThree,
-    alt: "Emirates Portfolio One",
-  },
 ];
 
 const mediumImages = [
@@ -120,15 +96,7 @@ function Portfolio() {
             caption="Website Development | Private Lounge"
           />
         </div>
-        <div className="portfolio-item">
-          <Slider 
-            images={emiratesSkyCargoImages}
-            animationTag='portfolio-section-emirates'
-            logo={EmiratesSkyCargoLogo}
-            caption="Website Development | Blog"
-            link="https://www.skycargo.com"
-          />
-        </div>
+
         <div className="portfolio-item">
           <Slider 
             images={mediumImages}

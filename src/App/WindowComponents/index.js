@@ -8,7 +8,6 @@ function WindowComponents({ currentSection, windowRef }) {
 
   const isLogoWhite = [
     'portfolio-section-mercedes', 
-    'portfolio-section-emirates',
     'portfolio-section-formuladrift',
 
     'online-section-steam',
