@@ -310,6 +310,7 @@ body
     position: absolute;
     top: 0px;
     left: 10px;
+    z-index: 1;
 
     img
       width: 80px;
@@ -358,3 +359,83 @@ body
       margin: 0 auto 0px 24px;
       transform: translate(0, 0px);
       @include smooth
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+  .window
+    padding: 25px;
+
+  .window-components
+    .navbar
+      top: 5px;
+      right: 45px;
+
+    .logo
+      img
+        width: 55px;
+        padding: 0px 10px 10px 5px;
+
+    .scrollbar
+      right: 0;
+
+  .window-inner
+    height: calc(100vh - 50px);
+
+    .about-section, .portfolio-section, .work-section, .online-section
+      padding: 30px;
+
+    .portfolio-section
+      .portfolio-item
+        a
+          width: calc(100% - 35px);
+
+@media only screen and (max-device-width : 767px)
+  .window
+    padding: 0px;
+
+  .window-components
+    .navbar
+      top: 5px;
+      right: 0;
+      border: 0;
+
+    .logo
+      img
+        background: transparent;
+        width: 55px;
+        padding: 0px 10px 10px 5px;
+
+    .scrollbar
+      display: none;
+
+    .navbar-container
+      height: 65px;
+      background: white;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+
+      .scrollbar-mobile
+        background: black;
+        height: 10px;
+        position: absolute;
+        top: 55px;
+        z-index: 2;
+
+  .window-inner
+    height: 100vh;
+    border: 0;
+
+    .about-section
+      margin-top: 50px;
+
+    .about-section, .portfolio-section, .work-section, .online-section
+      padding: 10px;
+
+    .portfolio-section
+      .portfolio-item
+        a
+          width: calc(100% - 35px);
+
+    .work-section-item
+      flex: 0 1 100%;
