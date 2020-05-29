@@ -65,7 +65,7 @@ function Work() {
 
       <div className="work-section-items" {...CursorAnimation.getProps('work-section-item')}>
         {workItems.map(work => (
-          <div className="work-section-item" >
+          <div className="work-section-item" key={work.title}>
             <Link href={work.link}>
               <h1 className="company-name">{work.company}</h1>
               <h1>{work.title}</h1>

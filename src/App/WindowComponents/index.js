@@ -25,8 +25,6 @@ function WindowComponents({ currentSection, windowRef }) {
       const offsetScroll = e.target.clientWidth > 1024 ? 50 : 25;
       const yPos = e.target.scrollTop / (e.target.scrollHeight - e.target.clientHeight) * (300 - offsetScroll + 5);
       const yPosMobile = (e.target.scrollTop / (e.target.scrollHeight - e.target.clientHeight) * e.target.clientWidth) ;
-      console.log(e);
-      
       
       scrollRef.current.style.transform = `translate(0, ${yPos}px)`;
       mobileScrollRef.current.style.width = `${yPosMobile}px`;
