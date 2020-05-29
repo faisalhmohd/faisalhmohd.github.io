@@ -18,6 +18,7 @@ import MediumTwo from './medium-photo-2.png';
 import MediumThree from './medium-photo-3.png';
 
 import FormulaDriftLogo from './formula-drift-logo.png';
+import FormulaDriftZero from './formula-drift-photo-0.jpg';
 import FormulaDriftOne from './formula-drift-photo-1.png';
 import FormulaDriftTwo from './formula-drift-photo-2.png';
 import FormulaDriftThree from './formula-drift-photo-3.png';
@@ -62,7 +63,7 @@ const emiratesSkyCargoImages = [
 
 const mediumImages = [
   {
-    src: 'https://images.unsplash.com/photo-1532620651297-482fe21279f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+    src: 'https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     alt: 'Medium Portfolio One'
   },
   {
@@ -81,7 +82,7 @@ const mediumImages = [
 
 const formulaDriftImages = [
   {
-    src: 'https://wallpaperplay.com/walls/full/b/3/d/237814.jpg',
+    src: FormulaDriftZero,
     alt: 'Formula Drift Portfolio One'
   },
   {
