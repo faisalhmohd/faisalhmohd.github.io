@@ -116,27 +116,7 @@ body
     @include smooth;
 
   &.portfolio-section
-    &-mercedes
-      width: auto;
-      height: auto;
-      border-radius: 0;
-      mix-blend-mode: normal;
-      background: transparent;
-
-      h1
-        color: white;
-    
-    &-emirates
-      width: auto;
-      height: auto;
-      border-radius: 0;
-      mix-blend-mode: normal;
-      background: transparent;
-
-      h1
-        color: white;
-
-    &-medium
+    &-mercedes, &-emirates, &-medium, &-formuladrift
       width: auto;
       height: auto;
       border-radius: 0;
@@ -171,6 +151,7 @@ body
   @include window-theme("portfolio-section-mercedes", black)
   @include window-theme("portfolio-section-emirates", #d71921)
   @include window-theme("portfolio-section-medium", black)
+  @include window-theme("portfolio-section-formuladrift", #D31E21)
 
   @include window-theme("online-section-steam", #1b2838)
   @include window-theme("online-section-keybase", #3663ea)
@@ -247,6 +228,7 @@ body
           filter: grayscale(100%);
           object-fit: cover;
           height: 100%;
+          object-position: top;
 
         .overlay-content
           transform: translate(-50%, -50%);

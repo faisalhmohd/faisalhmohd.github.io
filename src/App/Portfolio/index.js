@@ -17,6 +17,11 @@ import MediumOne from './medium-photo-1.png';
 import MediumTwo from './medium-photo-2.png';
 import MediumThree from './medium-photo-3.png';
 
+import FormulaDriftLogo from './formula-drift-logo.png';
+import FormulaDriftOne from './formula-drift-photo-1.png';
+import FormulaDriftTwo from './formula-drift-photo-2.png';
+import FormulaDriftThree from './formula-drift-photo-3.png';
+
 const mercedesAmgImages = [
   {
     src: 'https://www.mercedes-benz.com/en/mbsocialcar/mbsocialcar-mercedes-amg-gt-r/_jcr_content/root/slider_6/sliderchilditems/slideritem_3/image/MQ7-0-image-20190114132747/4-mercedes-benz-vehicles-mercedes-amg-gt-r-c-190-3400x1440.jpeg',
@@ -74,6 +79,25 @@ const mediumImages = [
   }
 ];
 
+const formulaDriftImages = [
+  {
+    src: 'https://wallpaperplay.com/walls/full/b/3/d/237814.jpg',
+    alt: 'Formula Drift Portfolio One'
+  },
+  {
+    src: FormulaDriftOne,
+    alt: 'Formula Drift Portfolio One'
+  },
+  {
+    src: FormulaDriftTwo,
+    alt: 'Formula Drift Portfolio One'
+  },
+  {
+    src: FormulaDriftThree,
+    alt: 'Formula Drift Portfolio One'
+  }
+];
+
 function Portfolio() {
   const CursorAnimation = useContext(CursorAnimationContext);
  
@@ -110,6 +134,16 @@ function Portfolio() {
             logo={MediumLogo}
             caption="Mobile Development | iOS | Android"
             link="https://play.google.com/store/apps/details?id=com.medium.reader&hl=en"
+          />
+        </div>
+
+        <div className="portfolio-item">
+          <Slider 
+            images={formulaDriftImages}
+            animationTag='portfolio-section-formuladrift'
+            logo={FormulaDriftLogo}
+            caption="Website Development | News | Live Score"
+            link="https://www.formulad.com/"
           />
         </div>
       </div>
