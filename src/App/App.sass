@@ -1,119 +1,119 @@
 @keyframes slide
   10%
-    margin-left: 0px;
+    margin-left: 0px
   35%
-    margin-left: -100%;
+    margin-left: -100%
   60%
-    margin-left: -200%;
+    margin-left: -200%
   85%
-    margin-left: -300%;
-  
+    margin-left: -300%
+
 @mixin font-global
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif
 
 @mixin smooth
-  transition: all 0.3s linear;
+  transition: all 0.3s linear
 
 @mixin window-theme($section, $color, $theme-color: white)
   &.#{$section}
-    background: $color;
+    background: $color
 
     h1, h2
-      color: $theme-color;
+      color: $theme-color
 
     .window-inner
-      border-color: $theme-color;
+      border-color: $theme-color
 
       .window-components
         .logo
           img
-            background: $color;
-        
+            background: $color
+
         .navbar
-          background: $color;
-          color: $theme-color;
-        
+          background: $color
+          color: $theme-color
+
         .scrollbar
           &-text
             background: $color
-            color: $theme-color;
+            color: $theme-color
 
           &-bar
-            background: $theme-color;
+            background: $theme-color
 
       .online-section-item
         img
           @if $theme-color == white
-            filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+            filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%)
 
 @mixin cursor-only-white
-  width: auto;
-  height: auto;
-  border-radius: 0;
-  mix-blend-mode: normal;
-  background: transparent;
+  width: auto
+  height: auto
+  border-radius: 0
+  mix-blend-mode: normal
+  background: transparent
 
   img
-    filter: invert(0%) sepia(3%) saturate(8%) hue-rotate(333deg) brightness(99%) contrast(101%);
+    filter: invert(0%) sepia(3%) saturate(8%) hue-rotate(333deg) brightness(99%) contrast(101%)
 
 @mixin cursor-only-black
-  width: auto;
-  height: auto;
-  border-radius: 0;
-  mix-blend-mode: normal;
-  background: transparent;
+  width: auto
+  height: auto
+  border-radius: 0
+  mix-blend-mode: normal
+  background: transparent
 
   img
-    filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%);
+    filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%)
 
 body, a
-  cursor: none;
-  text-decoration: none;
-  color: inherit;
+  cursor: none
+  text-decoration: none
+  color: inherit
 
 h1
   @include font-global
-  font-size: 40px;
-  font-weight: 500;
-  margin: 0;
-  margin-top: 5px;
+  font-size: 40px
+  font-weight: 500
+  margin: 0
+  margin-top: 5px
 
 h2
   @include font-global
-  font-size: 25px;
-  font-weight: 300;
-  color: #a2a2a2;
-  margin: 0;
-  margin-top: 5px;
+  font-size: 25px
+  font-weight: 300
+  color: #a2a2a2
+  margin: 0
+  margin-top: 5px
 
 body
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  margin: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  overflow: hidden
 
 .cursor
-  width: 20px;
-  height: 20px;
-  background: white;
-  border-radius: 100%;
-  position: absolute;
-  z-index: 10;
-  mix-blend-mode: difference;
-  pointer-events: none;
-  transition: width 0.2s linear, height 0.2s linear;
+  width: 20px
+  height: 20px
+  background: white
+  border-radius: 100%
+  position: absolute
+  z-index: 10
+  mix-blend-mode: difference
+  pointer-events: none
+  transition: width 0.2s linear, height 0.2s linear
 
   .text-wrapper
-    white-space: nowrap;
+    white-space: nowrap
 
   h1
-    display: inline-block;
-    margin-right: 20px;
-  
+    display: inline-block
+    margin-right: 20px
+
   img
-    display: inline-block;
-    width: 32px;
-    @include smooth;
+    display: inline-block
+    width: 32px
+    @include smooth
 
   &.portfolio-section
     &-mercedes, &-formuladrift
@@ -125,23 +125,23 @@ body
   &.work-section
     &-item
       @include cursor-only-black
-  
+
   &.online-section
     &-steam, &-keybase, &-linkedin, &-twitter, &-youtube
       @include cursor-only-white
     &-spotify, &-github
       @include cursor-only-black
-  
+
   &.online-section, &.work-section, &.portfolio-section, &.about-section
     &-heading
-      width: 100px;
-      height: 100px;
+      width: 100px
+      height: 100px
 
 .window
-  height: 100%;
-  margin: 0;
-  padding: 50px;
-  background: white;
+  height: 100%
+  margin: 0
+  padding: 50px
+  background: white
   @include smooth
 
   @include window-theme("portfolio-section-mercedes", black)
@@ -157,262 +157,262 @@ body
   @include window-theme("online-section-spotify", #1DB954, black)
 
 .window-inner::-webkit-scrollbar
-  display: none;
+  display: none
 
 .window-inner
-  height: calc(100vh - 100px);
-  border: 2px solid;
-  overflow: auto;
-  -ms-overflow-style: none;
+  height: calc(100vh - 100px)
+  border: 2px solid
+  overflow: auto
+  -ms-overflow-style: none
 
   .about-section
-    padding: 75px;
+    padding: 75px
 
     &-heading
-      padding: 25px;
+      padding: 25px
 
     h1
-      max-width: 900px;
+      max-width: 900px
 
   .portfolio-section
-    padding: 75px;
+    padding: 75px
 
     &-heading
-      padding: 25px;
+      padding: 25px
 
     h1
-      max-width: 900px;
+      max-width: 900px
 
     .portfolio
-      padding: 30px 25px;
+      padding: 30px 25px
 
       &-item
-        padding: 20px 0;
-        position: relative;
+        padding: 20px 0
+        position: relative
 
         a
-          overflow: hidden;
-          height: 700px;
-          width: 100%;
-          margin: 0 auto;
-          max-width: 1500px;
-          display: block;
+          overflow: hidden
+          height: 700px
+          width: 100%
+          margin: 0 auto
+          max-width: 1500px
+          display: block
 
           &:hover
             .slideshow-wrapper
-              animation: slide 10s ease infinite;
-          
+              animation: slide 10s ease infinite
+
             img.background-image
-              -webkit-filter: grayscale(0%);
-              filter: grayscale(0%);
+              -webkit-filter: grayscale(0%)
+              filter: grayscale(0%)
 
             .overlay-content
               opacity: 0%
 
         .slideshow-wrapper
-          width: calc(100% * 4);
+          width: calc(100% * 4)
 
         .slide
-          float: left;
-          height: 700px;
-          width: 25%;
+          float: left
+          height: 700px
+          width: 25%
 
         img.background-image
-          width: 100%;
-          -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-          object-fit: cover;
-          height: 100%;
-          object-position: top;
+          width: 100%
+          -webkit-filter: grayscale(100%)
+          filter: grayscale(100%)
+          object-fit: cover
+          height: 100%
+          object-position: top
 
         .overlay-content
-          transform: translate(-50%, -50%);
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transition: opacity 0.3s linear;
-          color: white;
-          text-align: center;
+          transform: translate(-50%, -50%)
+          position: absolute
+          top: 50%
+          left: 50%
+          transition: opacity 0.3s linear
+          color: white
+          text-align: center
 
           h1
-            font-size: 25px;
-            font-weight: 100;
+            font-size: 25px
+            font-weight: 100
 
           img.logo
-            width: 180px;
-          
+            width: 180px
+
 
   .work-section
-    padding: 75px;
+    padding: 75px
 
     &-heading
-      padding: 25px;
+      padding: 25px
 
     &-items
-      display: flex;
-      flex-wrap: wrap;
+      display: flex
+      flex-wrap: wrap
 
     &-item
-      flex: 0 50%;
+      flex: 0 50%
 
       a
-        padding: 25px;
-        display: block;
+        padding: 25px
+        display: block
 
       h1
-        font-size: 22px;
+        font-size: 22px
 
         &.company-name
-          font-size: 30px;
-      
+          font-size: 30px
+
       h2
-        font-size: 18px;
+        font-size: 18px
 
   .online-section
-    padding: 75px;
+    padding: 75px
 
     &-heading
-      padding: 25px;
+      padding: 25px
 
     &-items
-      display: flex;
-      flex-wrap: wrap;
+      display: flex
+      flex-wrap: wrap
 
     img
-      width: 40px;
-      padding: 30px;
+      width: 40px
+      padding: 30px
 
 .window-components
   .logo
-    position: absolute;
-    top: 0px;
-    left: 10px;
-    z-index: 1;
+    position: absolute
+    top: 0px
+    left: 10px
+    z-index: 1
 
     img
-      width: 80px;
-      padding: 20px 25px;
-      background: white;
+      width: 80px
+      padding: 20px 25px
+      background: white
       @include smooth
-  
+
   .navbar
-    background: white;
-    position: absolute;
-    display: block;
-    top: 27px;
-    right: 80px;
+    background: white
+    position: absolute
+    display: block
+    top: 27px
+    right: 80px
     @include smooth
-    border: 2px solid;
-    z-index: 1;
+    border: 2px solid
+    z-index: 1
 
     &-item
-      display: inline-block;
-      padding: 10px;
-      @include font-global;
-      font-size: 20px;
-    
+      display: inline-block
+      padding: 10px
+      @include font-global
+      font-size: 20px
+
     &-item:first-child
-      padding-left: 30px;
-    
+      padding-left: 30px
+
     &-item:last-child
-      padding-right: 30px;
+      padding-right: 30px
 
   .scrollbar
-    position: absolute;
-    @include font-global;
-    bottom: 300px;
-    right: 25px;
+    position: absolute
+    @include font-global
+    bottom: 300px
+    right: 25px
 
     &-text
-      background: white;
-      padding: 10px;
+      background: white
+      padding: 10px
       @include smooth
 
     &-bar
-      background: black;
-      width: 20px;
-      height: 5px;
-      border-radius: 5px;
-      margin: 0 auto 0px 24px;
-      transform: translate(0, 0px);
+      background: black
+      width: 20px
+      height: 5px
+      border-radius: 5px
+      margin: 0 auto 0px 24px
+      transform: translate(0, 0px)
       @include smooth
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
   .window
-    padding: 25px;
+    padding: 25px
 
   .window-components
     .navbar
-      top: 5px;
-      right: 45px;
+      top: 5px
+      right: 45px
 
     .logo
       img
-        width: 55px;
-        padding: 0px 10px 10px 5px;
+        width: 55px
+        padding: 0px 10px 10px 5px
 
     .scrollbar
-      right: 0;
+      right: 0
 
   .window-inner
-    height: calc(100vh - 50px);
+    height: calc(100vh - 50px)
 
     .about-section, .portfolio-section, .work-section, .online-section
-      padding: 30px;
+      padding: 30px
 
     .portfolio-section
       .portfolio-item
         a
-          width: calc(100% - 35px);
+          width: calc(100% - 35px)
 
 @media only screen and (max-device-width : 767px)
   .window
-    padding: 0px;
+    padding: 0px
 
   .window-components
     .navbar
-      top: 5px;
-      right: 0;
-      border: 0;
+      top: 5px
+      right: 0
+      border: 0
 
     .logo
       img
-        background: transparent;
-        width: 55px;
-        padding: 0px 10px 10px 5px;
+        background: transparent
+        width: 55px
+        padding: 0px 10px 10px 5px
 
     .scrollbar
-      display: none;
+      display: none
 
     .navbar-container
-      height: 65px;
-      background: white;
-      position: absolute;
-      top: 0;
-      z-index: 1;
-      width: 100%;
+      height: 65px
+      background: white
+      position: absolute
+      top: 0
+      z-index: 1
+      width: 100%
 
       .scrollbar-mobile
-        background: black;
-        height: 10px;
-        position: absolute;
-        top: 55px;
-        z-index: 2;
+        background: black
+        height: 10px
+        position: absolute
+        top: 55px
+        z-index: 2
 
   .window-inner
-    height: 100vh;
-    border: 0;
+    height: 100vh
+    border: 0
 
     .about-section
-      margin-top: 50px;
+      margin-top: 50px
 
     .about-section, .portfolio-section, .work-section, .online-section
-      padding: 10px;
+      padding: 10px
 
     .portfolio-section
       .portfolio-item
         a
-          width: calc(100% - 35px);
+          width: calc(100% - 35px)
 
     .work-section-item
-      flex: 0 1 100%;
+      flex: 0 1 100%
