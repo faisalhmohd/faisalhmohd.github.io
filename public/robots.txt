@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://faisalhmohd.github.io/notes
+
+# Sitemaps
+Sitemap: https://faisalhmohd.github.io/notes/sitemap.xml
