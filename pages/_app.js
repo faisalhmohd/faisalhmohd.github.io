@@ -82,31 +82,24 @@ export default function MyApp(props) {
 
   return (
     <div>
-      <Head>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-85038544-1"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-7NFFN0ZYQF"
+        strategy="beforeInteractive"
+      />
+      <Script strategy="beforeInteractive">
+        {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-85038544-1');
+            gtag('config', 'G-7NFFN0ZYQF');
           `}
-        </Script>
-
+      </Script>
+      <Head>
         <title>{`${TITLE} | ${title}`}</title>
-        <link
-          rel="shortcut icon"
-          href="/images/favicon.jpg"
-        />
-        <link
-          rel="icon"
-          href="/images/favicon.jpg"
-        />
+        <link rel="shortcut icon" href="/images/favicon.jpg" />
+        <link rel="icon" href="/images/favicon.jpg" />
         <link
           rel="preconnect"
           href={`https://${process.env.NEXT_PUBLIC_ALGOLIA_APP_ID}-dsn.algolia.net`}
@@ -159,22 +152,22 @@ export default function MyApp(props) {
       <style jsx global>
         {`
           @font-face {
-            font-family: 'Charter';
+            font-family: "Charter";
             font-style: normal;
             font-weight: normal;
-            src: url('${FONTS_BASE_URL}/Charter-Regular.ttf');
+            src: url("${FONTS_BASE_URL}/Charter-Regular.ttf");
           }
 
           @font-face {
-            font-family: 'Charter';
+            font-family: "Charter";
             font-style: normal;
             font-weight: 500;
-            src: url('${FONTS_BASE_URL}/Charter-Regular.ttf');
+            src: url("${FONTS_BASE_URL}/Charter-Regular.ttf");
           }
 
           @font-face {
-            font-family: 'Charter Bold';
-            src: url('${FONTS_BASE_URL}/Charter-Bold.ttf');
+            font-family: "Charter Bold";
+            src: url("${FONTS_BASE_URL}/Charter-Bold.ttf");
           }
 
           .page {
@@ -345,14 +338,14 @@ export default function MyApp(props) {
             padding-bottom: 1rem;
           }
 
-          .page--landing pre[class*='language-'] {
+          .page--landing pre[class*="language-"] {
             border: none;
             background: var(--black) !important;
             padding: 25px;
           }
 
           /* Make "npm install" code block thinner */
-          .page--landing .code:first-of-type pre[class*='language-'] {
+          .page--landing .code:first-of-type pre[class*="language-"] {
             padding: 20px 25px;
           }
 
