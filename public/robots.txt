@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://faisalhmohd.github.io/notes
+Host: https://mohdfaisal.xyz
 
 # Sitemaps
-Sitemap: https://faisalhmohd.github.io/notes/sitemap.xml
+Sitemap: https://mohdfaisal.xyz/sitemap.xml

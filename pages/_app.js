@@ -117,17 +117,17 @@ export default function MyApp(props) {
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://faisalhmohd.github.io/" />
+        <meta property="og:url" content="https://mohdfaisal.xyz/" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="https://faisalhmohd.github.io/images/social.png"
+          content="https://mohdfaisal.xyz/images/social.png"
         />
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:image"
-          content="https://faisalhmohd.github.io/images/social.png"
+          content="https://mohdfaisal.xyz/images/social.png"
         />
       </Head>
       {/* https://webaim.org/techniques/skipnav/ */}
