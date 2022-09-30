@@ -1,6 +1,18 @@
-export { default as fence } from './fence.markdoc';
-export { default as document } from './document.markdoc';
-export { default as heading } from './heading.markdoc';
-export { default as link } from './link.markdoc';
+import { default as fence } from './fence.markdoc';
+import { default as document } from './document.markdoc';
+import { default as heading } from './heading.markdoc';
+import { default as link } from './link.markdoc';
 
-export default {};
+export {
+  fence,
+  document,
+  heading,
+  link
+};
+
+export default {
+  fence,
+  document,
+  heading,
+  link
+};

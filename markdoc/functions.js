@@ -6,4 +6,4 @@ export const upper = {
   }
 };
 
-export default {};
+export default upper;

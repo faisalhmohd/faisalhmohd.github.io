@@ -101,11 +101,11 @@ export default function MyApp(props) {
         <title>{`${TITLE} | ${title}`}</title>
         <link
           rel="shortcut icon"
-          href="https://faisalhmohd.github.io/images/favicon.jpg"
+          href="/images/favicon.jpg"
         />
         <link
           rel="icon"
-          href="https://faisalhmohd.github.io/images/favicon.jpg"
+          href="/images/favicon.jpg"
         />
         <link
           rel="preconnect"
@@ -117,17 +117,17 @@ export default function MyApp(props) {
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://markdoc.dev" />
+        <meta property="og:url" content="https://faisalhmohd.github.io/" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="https://markdoc.dev/images/share.png"
+          content="https://faisalhmohd.github.io/images/social.png"
         />
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:image"
-          content="https://markdoc.dev/images/share.png"
+          content="https://faisalhmohd.github.io/images/social.png"
         />
       </Head>
       {/* https://webaim.org/techniques/skipnav/ */}
@@ -136,8 +136,8 @@ export default function MyApp(props) {
       </a>
       <TopNav theme={theme} setTheme={setTheme}>
         <Link href="/">Home</Link>
-        <Link href="https://faisalhmohd.github.io" className="primary">
-          About
+        <Link href="#" className="primary">
+          Search
         </Link>
       </TopNav>
       <div className="page">
