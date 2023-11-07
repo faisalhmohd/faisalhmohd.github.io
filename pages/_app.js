@@ -1,26 +1,26 @@
-import React from 'react';
-import Head from 'next/head';
-import Script from 'next/script'
+import React from "react";
+import Head from "next/head";
+import Script from "next/script";
 
-import { AppLink as Link } from '../components/AppLink';
-import { Footer, TableOfContents, TopNav } from '../components/Shell';
+import { AppLink as Link } from "../components/AppLink";
+import { Footer, TableOfContents, TopNav } from "../components/Shell";
 
-import '@docsearch/css';
-import 'prismjs';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/prism-bash';
-import 'prismjs/components/prism-css';
-import 'prismjs/components/prism-c';
-import 'prismjs/components/prism-matlab';
-import 'prismjs/themes/prism.css';
-import 'prismjs/plugins/diff-highlight/prism-diff-highlight';
-import 'prismjs/components/prism-diff';
-import 'codemirror/lib/codemirror.css';
+import "@docsearch/css";
+import "prismjs";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-css";
+import "prismjs/components/prism-c";
+import "prismjs/components/prism-matlab";
+import "prismjs/themes/prism.css";
+import "prismjs/plugins/diff-highlight/prism-diff-highlight";
+import "prismjs/components/prism-diff";
+import "codemirror/lib/codemirror.css";
 
-import '../public/globals.css';
+import "../public/globals.css";
 
-const TITLE = 'Mohammad Faisal';
-const DESCRIPTION = 'Blog';
+const TITLE = "Mohammad Faisal";
+const DESCRIPTION = "Blog";
 const FAISALBLOG = `
 
 
@@ -30,17 +30,17 @@ const FAISALBLOG = `
 
 `;
 
-const FONTS_BASE_URL = process.env.NEXT_PUBLIC_FONTS_BASE_URL || '/fonts';
+const FONTS_BASE_URL = process.env.NEXT_PUBLIC_FONTS_BASE_URL || "/fonts";
 
 function collectHeadings(node, sections = []) {
   if (node) {
-    if (node.name === 'Heading') {
+    if (node.name === "Heading") {
       const title = node.children[0];
 
-      if (typeof title === 'string') {
+      if (typeof title === "string") {
         sections.push({
           ...node.attributes,
-          title
+          title,
         });
       }
     }
@@ -76,7 +76,7 @@ export default function MyApp(props) {
     ? collectHeadings(pageProps.markdoc.content)
     : [];
 
-  const isLandingPage = props.router.pathname === '/';
+  const isLandingPage = props.router.pathname === "/";
 
   React.useEffect(() => console.log(FAISALBLOG), []);
 
@@ -434,6 +434,16 @@ export default function MyApp(props) {
             .page--landing .by-stripe {
               padding-top: 5.3125rem;
             }
+          }
+
+          .token.property,
+          .token.tag,
+          .token.boolean,
+          .token.number,
+          .token.constant,
+          .token.symbol,
+          .token.deleted {
+            color: #ff008e;
           }
 
           @media screen and (max-width: 600px) {
