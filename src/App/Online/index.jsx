@@ -11,7 +11,6 @@ import Spotify from './spotify.svg';
 import Github from './github.svg';
 import Email from './email.svg';
 import YoutubeMusic from './youtube-music.svg';
-import YoutubeMusicHover from './youtube-music-hover.svg';
 
 function Online() {
   const CursorAnimation = useContext(CursorAnimationContext);
@@ -79,7 +78,7 @@ function Online() {
           onBlur={() => CursorAnimation.setCurrentSection('')}
         >
           <Link href="https://music.youtube.com/@faisalhmohd" aria-label="YouTube Music">
-            <img src={CursorAnimation.currentSection === 'online-section-youtube-music' ? YoutubeMusicHover : YoutubeMusic} alt="" />
+            <img src={YoutubeMusic} alt="" />
           </Link>
         </div>
       </div>
