@@ -49,6 +49,12 @@
           @if $theme-color == white
             filter: invert(100%) sepia(86%) saturate(2%) hue-rotate(229deg) brightness(103%) contrast(100%)
 
+        a[aria-label="YouTube Music"] img
+          @if $theme-color == white
+            filter: invert(1)
+          @else
+            filter: none
+
 @mixin cursor-only-white
   width: auto
   height: auto
