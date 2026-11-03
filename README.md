@@ -46,7 +46,7 @@ Replace conflicting website A/AAAA/CNAME records for `@` and `www`; keep mail re
 - `legacy-nextjs-2023`: previous Next.js / Markdown site, including its articles.
 - `main-legacy`: original React portfolio before modernization.
 
-The visual design and historical profile content are retained. Content updates and accessibility improvements are separate follow-up work.
+The portfolio includes updated work history, company hover themes and local logo assets, and a Chat section linking to the call-booking calendar.
 
 ## Verify the Vite migration
 
@@ -55,6 +55,6 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-This builds and serves production output on port 4174, then checks desktop and mobile-width rendering, local image loading, section navigation, social link wiring, JavaScript errors, and horizontal overflow in Chromium. CI runs these checks before deployment. External images are excluded from the asset assertion: the legacy Mercedes-hosted photo is already broken in the original version. Mobile-width checks do not replace touch-device or Safari testing.
+This builds and serves production output on port 4174, then checks desktop and mobile-width rendering, local image loading, section navigation, social link wiring, JavaScript errors, and horizontal overflow in Chromium. CI runs these checks before deployment. The broken remote Mercedes photo has been replaced with a local asset. Mobile-width checks do not replace touch-device or Safari testing.
 
 The initial migration was published in commits `2fc1914` and `c17ef18`. A comparison with the original `main-legacy` at desktop (1440×1000) and mobile width (390×844) found matching headings, link targets, section scroll positions and cursor tracking, with no JavaScript runtime errors in either version.

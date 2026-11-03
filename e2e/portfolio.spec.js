@@ -18,7 +18,7 @@ test('production portfolio renders assets and supports section navigation', asyn
     return images.length > 0 && images.every(image => image.complete && image.naturalWidth > 0);
   })).toBe(true);
 
-  for (const section of ['portfolio', 'work', 'online', 'about']) {
+  for (const section of ['portfolio', 'work', 'online', 'chat', 'about']) {
     await page.locator('.navbar-item').filter({ hasText: section }).click();
     await expect.poll(() => page.locator(`.${section}-section`).evaluate(element => {
       const sectionBounds = element.getBoundingClientRect();

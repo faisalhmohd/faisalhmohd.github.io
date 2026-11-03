@@ -28,8 +28,7 @@ function Cursor() {
   return (
     <div className={`cursor ${currentSection}`} ref={cursorRef}>
       {
-        [
-          'work-section-item',
+        (currentSection.startsWith('work-section-item-') || [
 
           'portfolio-section-mercedes',
           'portfolio-section-medium',
@@ -42,7 +41,8 @@ function Cursor() {
           'online-section-youtube',
           'online-section-spotify',
           'online-section-github',
-        ].includes(currentSection) && 
+          'chat-section-calendar',
+        ].includes(currentSection)) &&
         <div className="text-wrapper">
           <img src={ExternalLinkIcon} className="external-link-icon" alt="external-link-cursor" />
         </div>
