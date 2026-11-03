@@ -1,11 +1,7 @@
-FROM node:18
-
+FROM node:24-alpine
 WORKDIR /app
-
-# ENV PATH /app/node_modules/.bin:$PATH
-
+COPY package*.json ./
+RUN npm ci
 COPY . .
-
-RUN yarn
-
-CMD ["yarn", "start"]
+EXPOSE 3000
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "3000"]

@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mohammad Faisal's portfolio
 
-## Available Scripts
+React portfolio built with Vite and Sass, deployed to GitHub Pages at https://mohdfaisal.xyz.
 
-In the project directory, you can run:
+## Local development
 
-### `yarn start`
+Use Node 24 (see `.nvmrc`), then:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```sh
+npm ci
+npm run dev
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Open the URL Vite prints. Changes reload automatically.
 
-### `yarn test`
+```sh
+npm test          # component smoke test
+npm run build     # production output in dist/
+npm run preview   # serve the production build locally
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Docker development is also available with `docker compose up --build` on port 3000.
 
-### `yarn build`
+## Deployment
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+GitHub Actions tests and builds pull requests. Pushes to `main` also deploy `dist/` to GitHub Pages using the built-in GITHUB_TOKEN; no deployment key is needed.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+In repository Settings > Pages, set Source to **GitHub Actions** and Custom domain to **mohdfaisal.xyz**. Enable Enforce HTTPS once GitHub issues the certificate. `public/CNAME` records the intended domain in the output; the Pages setting is authoritative for Actions deployments.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Cloudflare DNS
 
-### `yarn eject`
+Keep Cloudflare as the DNS provider. Set these website records to **DNS only** (gray cloud), TTL Auto:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Type | Name | Target |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | faisalhmohd.github.io |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Replace conflicting website A/AAAA/CNAME records for `@` and `www`; keep mail records and unrelated subdomains. If using IPv6, use GitHub Pages' four published AAAA addresses rather than a previous host's addresses. DNS and certificate issuance may take time. GitHub redirects www to the configured apex domain once both resolve correctly.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Archived versions
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `legacy-nextjs-2023`: previous Next.js / Markdown site, including its articles.
+- `main-legacy`: original React portfolio before modernization.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The visual design and historical profile content are retained. Content updates and accessibility improvements are separate follow-up work.
