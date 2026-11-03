@@ -25,3 +25,6 @@ yarn-error.log*
 /dist/
 /.next/
 /main-legacy/
+
+/test-results/
+/playwright-report/
