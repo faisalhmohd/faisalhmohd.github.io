@@ -21,6 +21,7 @@ function WindowComponents({ currentSection, windowRef }) {
     'online-section-keybase',
     'online-section-twitter',
     'online-section-youtube',
+    'online-section-youtube-music',
   ].includes(currentSection);
 
   useEffect(() => {

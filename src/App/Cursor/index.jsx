@@ -41,6 +41,8 @@ function Cursor() {
           'online-section-youtube',
           'online-section-spotify',
           'online-section-github',
+          'online-section-email',
+          'online-section-youtube-music',
           'chat-section-calendar',
         ].includes(currentSection)) &&
         <div className="text-wrapper">

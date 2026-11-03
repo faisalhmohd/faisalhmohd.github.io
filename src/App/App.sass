@@ -132,9 +132,9 @@ body
       @include cursor-only-white
 
   &.online-section
-    &-steam, &-keybase, &-linkedin, &-twitter, &-youtube
+    &-steam, &-keybase, &-linkedin, &-twitter, &-youtube, &-youtube-music
       @include cursor-only-white
-    &-spotify, &-github
+    &-spotify, &-github, &-email
       @include cursor-only-black
 
   &.chat-section-calendar
@@ -175,6 +175,8 @@ body
   @include window-theme("online-section-linkedin", #0077B5)
   @include window-theme("online-section-twitter", #1DA1F2)
   @include window-theme("online-section-youtube", #FF0000)
+  @include window-theme("online-section-youtube-music", #FF0000)
+  @include window-theme("online-section-email", white, black)
 
   @include window-theme("online-section-spotify", #1DB954, black)
 
@@ -189,6 +191,11 @@ body
 
   .about-section
     padding: 75px
+
+    .about-email
+      display: inline-block
+      overflow-wrap: anywhere
+      max-width: 100%
 
     &-heading
       padding: 25px
@@ -555,3 +562,12 @@ body
 
   .window-inner .chat-section-content
     gap: 12px
+
+// Match the monochrome social icons while retaining the supplied artwork.
+.window .window-inner .online-section-item a[aria-label="YouTube Music"] img
+  filter: none
+  width: 46px
+  padding: 27px
+
+.window.online-section-youtube-music .window-inner .online-section-item a[aria-label="YouTube Music"] img
+  filter: none

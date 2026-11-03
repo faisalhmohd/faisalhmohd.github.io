@@ -53,7 +53,7 @@ const workItems = [
     wordmark: MercedesWordmark,
     wordmarkStyle: 'mercedes',
     title: 'Simulation Engineer',
-    time: '2013 - Present'
+    time: '2013 - 2018'
   },
   {
     link: "https://co.design",
