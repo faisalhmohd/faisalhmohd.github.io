@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 import Slider from '../Slider';
 
+import MercedesAMGZero from './mercedesamg-photo-0.jpg';
 import MercedesAMGOne from './mercedesamg-photo-1.png';
 import MercedesAMGTwo from './mercedesamg-photo-2.png';
 import MercedesAMGThree from './mercedesamg-photo-3.png';
@@ -21,7 +22,8 @@ import FormulaDriftThree from './formuladrift-photo-3.png';
 
 const mercedesAmgImages = [
   {
-    src: 'https://www.mercedes-benz.com/en/mbsocialcar/mbsocialcar-mercedes-amg-gt-r/_jcr_content/root/slider_6/sliderchilditems/slideritem_3/image/MQ7-0-image-20190114132747/4-mercedes-benz-vehicles-mercedes-amg-gt-r-c-190-3400x1440.jpeg',
+    src: MercedesAMGZero,
+    objectPosition: 'center',
     alt: 'Mercedes Portfolio One'
   },
   {

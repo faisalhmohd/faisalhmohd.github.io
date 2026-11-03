@@ -21,6 +21,9 @@
     h1, h2
       color: $theme-color
 
+    .chat-section-booking
+      color: $theme-color
+
     .window-inner
       border-color: $theme-color
 
@@ -123,8 +126,10 @@ body
       @include cursor-only-black
 
   &.work-section
-    &-item
+    &-item-fulflld, &-item-optimizely, &-item-codesign, &-item-uae, &-item-welcome
       @include cursor-only-black
+    &-item-crbnd, &-item-mercedes, &-item-webable, &-item-emirates, &-item-yas
+      @include cursor-only-white
 
   &.online-section
     &-steam, &-keybase, &-linkedin, &-twitter, &-youtube
@@ -132,7 +137,10 @@ body
     &-spotify, &-github
       @include cursor-only-black
 
-  &.online-section, &.work-section, &.portfolio-section, &.about-section
+  &.chat-section-calendar
+    @include cursor-only-white
+
+  &.online-section, &.work-section, &.portfolio-section, &.about-section, &.chat-section
     &-heading
       width: 100px
       height: 100px
@@ -147,6 +155,20 @@ body
   @include window-theme("portfolio-section-mercedes", black)
   @include window-theme("portfolio-section-medium", white, black)
   @include window-theme("portfolio-section-formuladrift", #D31E21)
+
+  // Colors sampled from company websites. CRBND is an offline-domain fallback.
+  @include window-theme("work-section-item-fulflld", #f25050, black)
+  @include window-theme("work-section-item-optimizely", #abff44, black)
+  @include window-theme("work-section-item-crbnd", #2b2b2b)
+  @include window-theme("work-section-item-welcome", white, black)
+  @include window-theme("work-section-item-mercedes", black)
+  @include window-theme("work-section-item-codesign", #e0dbd6, black)
+  @include window-theme("work-section-item-webable", #0d316b)
+  @include window-theme("work-section-item-emirates", #d71921)
+  @include window-theme("work-section-item-yas", #0b5fff)
+  @include window-theme("work-section-item-uae", #ad833b, black)
+  @include window-theme("chat-section-calendar", #1a73e8)
+
 
   @include window-theme("online-section-steam", #1b2838)
   @include window-theme("online-section-keybase", #3663ea)
@@ -264,6 +286,81 @@ body
 
         &.company-name
           font-size: 30px
+          position: relative
+
+      .company-name-text
+        display: block
+        transition: opacity 200ms ease
+
+      .company-wordmark
+        position: absolute
+        inset: 0
+        display: flex
+        align-items: center
+        opacity: 0
+        pointer-events: none
+        transition: opacity 200ms ease
+
+        img
+          display: block
+          width: auto
+          max-width: 100%
+          height: 32px
+          filter: brightness(0)
+
+        &-optimizely img
+          height: 40px
+          filter: none
+
+        &-mercedes
+          align-items: flex-end
+
+          img
+            width: 187.875px
+            height: auto
+            max-height: none
+            object-fit: contain
+            filter: none
+
+        &-webable, &-emirates, &-yas, &-uae
+          align-items: flex-end
+
+        &-webable img
+          height: 48px
+          filter: brightness(0) invert(1)
+
+        &-emirates img
+          height: 56px
+          filter: none
+
+        &-yas img
+          width: 345px
+          height: auto
+          filter: none
+
+        &-uae img
+          height: 60px
+          filter: none
+
+        &-newscred img
+          width: 220px
+          height: auto
+          filter: none
+
+        &-codesign img
+          height: 36px
+
+      @media (hover: hover) and (pointer: fine)
+        a:hover, a:focus-visible
+          .has-wordmark
+            .company-name-text
+              opacity: 0
+            .company-wordmark
+              opacity: 1
+
+      @media (prefers-reduced-motion: reduce)
+        .company-name-text, .company-wordmark
+          transition: none
 
       h2
         font-size: 18px
@@ -281,6 +378,34 @@ body
     img
       width: 40px
       padding: 30px
+
+  .chat-section
+    padding: 75px
+
+    &-content
+      display: flex
+      align-items: flex-end
+      gap: 12px
+
+    &-heading
+      padding: 25px
+      padding-right: 0
+
+    &-booking
+      display: inline-flex
+      flex-shrink: 0
+      margin-bottom: 23px
+      padding: 8px
+      border-radius: 8px
+
+      &:focus-visible
+        outline: 2px solid currentColor
+        outline-offset: 4px
+
+      svg
+        width: 40px
+        height: 40px
+        pointer-events: none
 
 .window-components
   .logo
@@ -357,7 +482,7 @@ body
   .window-inner
     height: calc(100vh - 50px)
 
-    .about-section, .portfolio-section, .work-section, .online-section
+    .about-section, .portfolio-section, .work-section, .online-section, .chat-section
       padding: 30px
 
     .portfolio-section
@@ -406,7 +531,7 @@ body
     .about-section
       margin-top: 50px
 
-    .about-section, .portfolio-section, .work-section, .online-section
+    .about-section, .portfolio-section, .work-section, .online-section, .chat-section
       padding: 10px
 
     .portfolio-section
@@ -416,3 +541,17 @@ body
 
     .work-section-item
       flex: 0 1 100%
+
+@media only screen and (max-device-width : 767px)
+  .window-components .navbar-item
+    font-size: 14px
+    padding: 10px 8px
+
+    &:first-child
+      padding-left: 10px
+
+    &:last-child
+      padding-right: 10px
+
+  .window-inner .chat-section-content
+    gap: 12px

@@ -5,6 +5,7 @@ import About from '../About';
 import Portfolio from '../Portfolio';
 import Work from '../Work';
 import Online from '../Online';
+import Chat from '../Chat';
 
 import { CursorAnimationContext } from '../Contexts/CursorAnimationProvider';
 
@@ -20,6 +21,7 @@ function Window() {
         <Portfolio />
         <Work />
         <Online />
+        <Chat />
       </div>
     </div>
   );

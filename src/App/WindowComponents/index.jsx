@@ -7,6 +7,12 @@ function WindowComponents({ currentSection, windowRef }) {
   const mobileScrollRef = useRef(null);
 
   const isLogoWhite = [
+    'chat-section-calendar',
+    'work-section-item-crbnd',
+    'work-section-item-mercedes',
+    'work-section-item-webable',
+    'work-section-item-emirates',
+    'work-section-item-yas',
     'portfolio-section-mercedes', 
     'portfolio-section-formuladrift',
 
@@ -49,7 +55,7 @@ function WindowComponents({ currentSection, windowRef }) {
         <img src={isLogoWhite ? LogoWhite : Logo} alt="logo" />
       </div>
       <div className="navbar">
-        {["about", "portfolio", "work", "online"].map((item) => (
+        {["about", "portfolio", "work", "online", "chat"].map((item) => (
           <div className="navbar-item" key={item} onClick={e => handleNavItemClick(e, item)}>
             {item}
           </div>

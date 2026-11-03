@@ -10,7 +10,7 @@ function Slider({ images, link, animationTag, logo, caption, captionColor = 'whi
       <div className="slideshow-wrapper">
         {images.map(image => (
           <div className="slide" key={image.src}>
-            <img src={image.src} className="background-image" alt={image.alt} />
+            <img src={image.src} className="background-image" alt={image.alt} style={{ objectPosition: image.objectPosition }} />
           </div>
         ))}
       </div>
