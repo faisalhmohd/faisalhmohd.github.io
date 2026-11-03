@@ -47,3 +47,14 @@ Replace conflicting website A/AAAA/CNAME records for `@` and `www`; keep mail re
 - `main-legacy`: original React portfolio before modernization.
 
 The visual design and historical profile content are retained. Content updates and accessibility improvements are separate follow-up work.
+
+## Verify the Vite migration
+
+```sh
+npx playwright install chromium
+npm run test:e2e
+```
+
+This builds and serves production output on port 4174, then checks desktop and mobile-width rendering, local image loading, section navigation, social link wiring, JavaScript errors, and horizontal overflow in Chromium. CI runs these checks before deployment. External images are excluded from the asset assertion: the legacy Mercedes-hosted photo is already broken in the original version. Mobile-width checks do not replace touch-device or Safari testing.
+
+The initial migration was published in commits `2fc1914` and `c17ef18`. A comparison with the original `main-legacy` at desktop (1440×1000) and mobile width (390×844) found matching headings, link targets, section scroll positions and cursor tracking, with no JavaScript runtime errors in either version.

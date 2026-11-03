@@ -6,6 +6,6 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: ['./src/setupTests.js'],
-    exclude: ['**/node_modules/**', '**/dist/**', '**/main-legacy/**'],
+    exclude: ['**/node_modules/**', '**/dist/**', '**/main-legacy/**', '**/e2e/**'],
   },
 });
