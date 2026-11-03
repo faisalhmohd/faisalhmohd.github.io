@@ -9,6 +9,9 @@ import Link from '../Link';
 import Youtube from './youtube.svg';
 import Spotify from './spotify.svg';
 import Github from './github.svg';
+import Email from './email.svg';
+import YoutubeMusic from './youtube-music.svg';
+import YoutubeMusicHover from './youtube-music-hover.svg';
 
 function Online() {
   const CursorAnimation = useContext(CursorAnimationContext);
@@ -60,6 +63,23 @@ function Online() {
         <div className="online-section-item" {...CursorAnimation.getProps('online-section-github')}>
           <Link href="https://github.com/faisalhmohd">
             <img src={Github} alt="github" />
+          </Link>
+        </div>
+        <div className="online-section-item" {...CursorAnimation.getProps('online-section-email')}>
+          <Link href="mailto:faisalhmohd@gmail.com" aria-label="Email me">
+            <img src={Email} alt="" />
+          </Link>
+        </div>
+
+        <div
+          className="online-section-item"
+          onMouseEnter={() => CursorAnimation.setCurrentSection('online-section-youtube-music')}
+          onMouseLeave={() => CursorAnimation.setCurrentSection('')}
+          onFocus={() => CursorAnimation.setCurrentSection('online-section-youtube-music')}
+          onBlur={() => CursorAnimation.setCurrentSection('')}
+        >
+          <Link href="https://music.youtube.com/@faisalhmohd" aria-label="YouTube Music">
+            <img src={CursorAnimation.currentSection === 'online-section-youtube-music' ? YoutubeMusicHover : YoutubeMusic} alt="" />
           </Link>
         </div>
       </div>

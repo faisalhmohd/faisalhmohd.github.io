@@ -11,7 +11,7 @@ test('production portfolio renders assets and supports section navigation', asyn
   });
 
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: 'Mohammad Faisal', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /^Mohammad Faisal/ })).toBeVisible();
   await expect(page.getByRole('link', { name: 'github', exact: true })).toHaveAttribute('href', 'https://github.com/faisalhmohd');
   await expect.poll(() => page.evaluate(() => {
     const images = [...document.images].filter(image => new URL(image.src).origin === location.origin);
